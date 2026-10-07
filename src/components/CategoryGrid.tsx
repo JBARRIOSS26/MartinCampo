@@ -52,7 +52,7 @@ const categories: CategoryItem[] = [
     title: "Hogar y Jardín",
     description: "Fundas resistentes al clima para tu espacio exterior e interior.",
     icon: Home,
-    tags: ["Asadores", "Salas Terraza", "Calentadores"],
+    tags: ["Asadores", "Futbolito y Billar", "Pantallas TV", "Mesas"],
     color: "from-violet-500/10 to-violet-600/5",
     iconBg: "bg-violet-100",
     iconColor: "text-violet-600",

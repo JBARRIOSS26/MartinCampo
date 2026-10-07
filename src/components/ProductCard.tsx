@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   Eye,
@@ -9,6 +9,7 @@ import {
   Clock,
   Sparkles,
   MessageCircle,
+  Palette,
 } from "lucide-react";
 import type { Product } from "@/data/products";
 
@@ -19,6 +20,15 @@ interface ProductCardProps {
 
 export default function ProductCard({ product, onOpenModal }: ProductCardProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  // Si la imagen ya se cargó antes de la hidratación, onLoad no se dispara: lo verificamos al montar
+  useEffect(() => {
+    const img = imgRef.current;
+    if (img && img.complete && img.naturalWidth > 0) {
+      setImageLoaded(true);
+    }
+  }, [product.imagen]);
 
   // Mensaje para cotización rápida directa por WhatsApp
   const whatsappUrl = `https://wa.me/5213314008921?text=${encodeURIComponent(
@@ -36,29 +46,31 @@ export default function ProductCard({ product, onOpenModal }: ProductCardProps) 
       className="group bg-white rounded-2xl border border-border-light overflow-hidden flex flex-col shadow-sm hover:shadow-xl hover:border-brand/20 transition-all duration-300"
     >
       {/* Contenedor de Imagen */}
-      <div className="relative aspect-[4/3] w-full bg-surface-gray overflow-hidden">
+      <div className="relative aspect-[4/3] w-full bg-surface-gray overflow-hidden p-2 flex items-center justify-center">
         {/* Placeholder mientras carga */}
         {!imageLoaded && (
-          <div className="absolute inset-0 bg-surface-gray animate-pulse flex items-center justify-center">
+          <div className="absolute inset-0 bg-surface-gray animate-pulse flex items-center justify-center pointer-events-none">
             <ShieldCheck className="w-8 h-8 text-text-muted/30" />
           </div>
         )}
 
         <img
+          ref={imgRef}
           src={product.imagen}
           alt={product.nombre}
           loading="lazy"
           onLoad={() => setImageLoaded(true)}
-          className={`w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 ${
-            imageLoaded ? "opacity-100" : "opacity-0"
+          onError={() => setImageLoaded(true)}
+          className={`w-full h-full object-contain object-center transition-all duration-500 group-hover:scale-105 ${
+            imageLoaded ? "opacity-100" : "opacity-90"
           }`}
         />
 
         {/* Gradiente sutil inferior */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
         {/* Badge de Categoría */}
-        <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
+        <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
           <span className="px-3 py-1 text-[11px] font-semibold bg-white/95 backdrop-blur-md text-brand rounded-full shadow-sm border border-white/40">
             {product.categoriaLabel}
           </span>
@@ -71,14 +83,14 @@ export default function ProductCard({ product, onOpenModal }: ProductCardProps) 
         </div>
 
         {/* Botón rápido de vista en hover */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
           <button
             type="button"
             onClick={() => onOpenModal(product)}
-            className="pointer-events-auto px-4 py-2 bg-brand/90 hover:bg-brand text-white text-xs font-semibold rounded-xl flex items-center gap-2 shadow-lg backdrop-blur-md transform translate-y-2 group-hover:translate-y-0 transition-all"
+            className="pointer-events-auto px-4 py-2 bg-brand/90 hover:bg-brand text-white text-xs font-semibold rounded-xl flex items-center gap-2 shadow-lg backdrop-blur-md transform translate-y-2 group-hover:translate-y-0 transition-all cursor-pointer"
           >
             <Eye className="w-4 h-4 text-accent" />
-            Vista Rápida
+            Ver Galería y Colores
           </button>
         </div>
       </div>
@@ -93,6 +105,25 @@ export default function ProductCard({ product, onOpenModal }: ProductCardProps) 
           >
             {product.nombre}
           </h3>
+
+          {/* Variantes de color en la tarjeta */}
+          {product.colores && product.colores.length > 0 && (
+            <div className="flex items-center gap-1.5 mb-3">
+              <div className="flex items-center -space-x-1">
+                {product.colores.map((color) => (
+                  <span
+                    key={color.id}
+                    title={color.nombre}
+                    className="w-3.5 h-3.5 rounded-full border border-white shadow-sm inline-block"
+                    style={{ backgroundColor: color.hex }}
+                  />
+                ))}
+              </div>
+              <span className="text-[11px] font-medium text-text-secondary">
+                {product.colores.length} colores
+              </span>
+            </div>
+          )}
 
           {/* Descripción corta */}
           <p className="text-xs sm:text-sm text-text-secondary leading-relaxed line-clamp-2 mb-4">
@@ -127,15 +158,11 @@ export default function ProductCard({ product, onOpenModal }: ProductCardProps) 
           </div>
         </div>
 
-        {/* Footer de Tarjeta: Precio y Acciones */}
+        {/* Footer de Tarjeta: Sin precios - Cotización directa por WhatsApp */}
         <div className="pt-2 flex items-center justify-between gap-2">
-          <div>
-            <span className="text-[10px] text-text-secondary block uppercase tracking-wider font-semibold">
-              Precio desde
-            </span>
-            <span className="text-base font-extrabold text-brand">
-              {product.precioDesde || "A medida"}
-            </span>
+          <div className="flex items-center gap-1.5 text-xs text-text-secondary font-medium">
+            <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span>Cotización inmediata</span>
           </div>
 
           <div className="flex items-center gap-1.5">
@@ -145,19 +172,19 @@ export default function ProductCard({ product, onOpenModal }: ProductCardProps) 
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Cotizar ${product.nombre} por WhatsApp`}
-              className="w-9 h-9 rounded-xl bg-surface-gray hover:bg-[#25d366]/10 border border-border-light hover:border-[#25d366]/40 flex items-center justify-center text-text-secondary hover:text-[#25d366] transition-colors"
+              className="w-9 h-9 rounded-xl bg-[#25d366]/10 hover:bg-[#25d366] text-[#25d366] hover:text-white border border-[#25d366]/30 flex items-center justify-center transition-all shadow-sm hover:shadow-md cursor-pointer"
               title="Cotizar por WhatsApp"
             >
-              <MessageCircle className="w-4 h-4 text-[#25d366]" />
+              <MessageCircle className="w-4.5 h-4.5" />
             </a>
 
-            {/* Botón Ver Detalles / Cotizar */}
+            {/* Botón Ver Detalles / Galería */}
             <button
               type="button"
               onClick={() => onOpenModal(product)}
-              className="px-3.5 py-2 bg-accent hover:bg-accent-hover text-white text-xs font-bold rounded-xl transition-all shadow-sm hover:shadow-md hover:shadow-accent/25 flex items-center gap-1.5"
+              className="px-3.5 py-2 bg-brand hover:bg-brand-light text-white text-xs font-bold rounded-xl transition-all shadow-sm hover:shadow-md flex items-center gap-1.5 cursor-pointer"
             >
-              <span>Ver Detalles</span>
+              <span>Ver Galería</span>
             </button>
           </div>
         </div>

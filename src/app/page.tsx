@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import CategoryGrid from "@/components/CategoryGrid";
 import CatalogSection from "@/components/CatalogSection";
+import CompanyMissionVision from "@/components/CompanyMissionVision";
 import ValuePropsSection from "@/components/ValuePropsSection";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import CtaBanner from "@/components/CtaBanner";
@@ -14,31 +15,34 @@ export default function HomePage() {
       {/* 1. Barra de Anuncios Superior */}
       <TopAnnouncementBar />
 
-      {/* 2. Barra de Navegación Sticky */}
+      {/* 2. Barra de Navegación Sticky con Logotipo Oficial */}
       <Navbar />
 
       {/* Contenido Principal */}
       <main className="flex-1">
-        {/* 3. Hero Section Split-Screen */}
+        {/* 3. Hero Section Split-Screen con Visual Real de Taller */}
         <HeroSection />
 
         {/* 4. Grid de Categorías Especializadas */}
         <CategoryGrid />
 
-        {/* 5. Catálogo Completo Interactivo con Filtros, Búsqueda y Detalle */}
+        {/* 5. Catálogo Completo Interactivo con Selector de Color, Medidas y WhatsApp */}
         <CatalogSection />
 
-        {/* 6. Propuesta de Valor y Métricas de Confianza */}
+        {/* 6. Sección Institucional (Misión, Visión y Valores Corporativos) */}
+        <CompanyMissionVision />
+
+        {/* 7. Propuesta de Valor y Métricas de Confianza */}
         <ValuePropsSection />
 
-        {/* 7. Testimonios de Clientes Verificados */}
+        {/* 8. Testimonios Reales y Prueba Social (Socios Comerciales & Familias) */}
         <TestimonialsCarousel />
 
-        {/* 8. Banner de Conversión / Cotizaciones Especiales */}
+        {/* 9. Banner de Conversión / Cotizaciones Especiales */}
         <CtaBanner />
       </main>
 
-      {/* 9. Footer Institucional */}
+      {/* 10. Footer Institucional */}
       <Footer />
     </div>
   );

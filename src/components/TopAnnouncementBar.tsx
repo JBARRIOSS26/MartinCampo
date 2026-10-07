@@ -3,10 +3,10 @@
 import { Truck, Shield, FileText, Phone } from "lucide-react";
 
 const announcements = [
-  { icon: Truck, text: "Envíos gratis a todo México en compras > $999 MXN" },
-  { icon: Shield, text: "Telas de grado marino y filtro UV" },
+  { icon: Truck, text: "Envíos asegurados a todo México con paqueterías líderes" },
+  { icon: Shield, text: "Telas impermeables de alta gama y filtro UV" },
   { icon: FileText, text: "Facturación CFDI 4.0 inmediata" },
-  { icon: Phone, text: "(33) 3812-4090" },
+  { icon: Phone, text: "Atención y cotización directa: (33) 1400-8921" },
 ];
 
 export default function TopAnnouncementBar() {

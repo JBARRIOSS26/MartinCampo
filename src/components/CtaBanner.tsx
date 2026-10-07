@@ -1,0 +1,88 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { MessageCircle, Zap, ShieldCheck, Truck } from "lucide-react";
+
+export default function CtaBanner() {
+  return (
+    <section
+      id="contacto"
+      className="relative py-16 sm:py-20 lg:py-24 bg-brand overflow-hidden"
+    >
+      {/* Subtle texture overlay */}
+      <div className="absolute inset-0 opacity-[0.04]">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, #ffffff 1px, transparent 0)`,
+            backgroundSize: "32px 32px",
+          }}
+        />
+      </div>
+
+      {/* Decorative blurs */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
+
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight mb-4">
+            ¿Necesitas una funda especial?
+          </h2>
+          <p className="text-base sm:text-lg text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Fabricamos fundas y cubiertas a la medida para equipo industrial,
+            mobiliario especial o cualquier proyecto que necesites. Respuesta
+            en menos de 2 horas.
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+            <motion.a
+              href="#"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 h-13 bg-accent hover:bg-accent-hover text-white font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/40 text-sm sm:text-base"
+            >
+              Solicita tu Cotización Personalizada Aquí
+            </motion.a>
+            <motion.a
+              href="https://wa.me/5213314008921"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 h-13 bg-transparent border-2 border-white/25 text-white font-semibold rounded-xl hover:bg-white/10 hover:border-white/40 transition-all duration-200 text-sm sm:text-base"
+            >
+              <MessageCircle className="w-5 h-5 text-[#25d366]" />
+              WhatsApp Directo (33) 1400-8921
+            </motion.a>
+          </div>
+
+          {/* Trust indicators */}
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+            {[
+              { icon: Zap, label: "Respuesta Rápida" },
+              { icon: ShieldCheck, label: "Sin Compromiso" },
+              { icon: Truck, label: "Entrega a Todo el País" },
+            ].map((item) => (
+              <div
+                key={item.label}
+                className="flex items-center gap-2 text-white/60"
+              >
+                <item.icon className="w-4 h-4 text-accent" />
+                <span className="text-xs font-medium tracking-wide">
+                  {item.label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

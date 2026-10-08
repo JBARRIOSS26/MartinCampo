@@ -461,10 +461,10 @@ export const PRODUCTS: Product[] = [
       "Costuras de alta resistencia con hilo náutico",
     ],
     imagen:
-      "/assets/images/Hogar/Asador/Portada. Asador medio hexágono.png",
+      "/assets/images-wm/Hogar/Asador/Portada. Asador medio hexágono.webp",
     imagenesSecundarias: [
-      "/assets/images/Hogar/Asador/Portada. Asador medio hexágono.png",
-      "/assets/images/Hogar/Asador/Asador portada.png",
+      "/assets/images-wm/Hogar/Asador/Portada. Asador medio hexágono.webp",
+      "/assets/images-wm/Hogar/Asador/Asador portada.webp",
     ],
     popular: true,
     tiempoEntrega: "24 a 48 hrs",
@@ -489,7 +489,7 @@ export const PRODUCTS: Product[] = [
       "Interior afelpado suave anti-rayones",
     ],
     imagen:
-      "/assets/images/Hogar/Futbolito/Futbolito portada.png",
+      "/assets/images-wm/Hogar/Futbolito/Futbolito portada.webp",
     popular: true,
     tiempoEntrega: "24 a 48 hrs",
   },
@@ -515,7 +515,7 @@ export const PRODUCTS: Product[] = [
       "Interior suave afelpado que cuida las bandas de madera",
     ],
     imagen:
-      "/assets/images/Hogar/Mesa de billar/Mesa de billar vinipiel.png",
+      "/assets/images-wm/Hogar/Mesa de billar/Mesa de billar vinipiel.webp",
     popular: true,
     tiempoEntrega: "24 a 48 hrs",
   },
@@ -540,11 +540,11 @@ export const PRODUCTS: Product[] = [
       "Máxima resistencia a la lluvia torrencial y sol extremo",
     ],
     imagen:
-      "/assets/images/Hogar/Mesa hexágono/Mesa hexágono portada.png",
+      "/assets/images-wm/Hogar/Mesa hexágono/Mesa hexágono portada.webp",
     imagenesSecundarias: [
-      "/assets/images/Hogar/Mesa hexágono/Mesa hexágono portada.png",
-      "/assets/images/Hogar/Mesa hexágono/Comparación Mesa hexágono.png",
-      "/assets/images/Hogar/Mesa hexágono/WhatsApp Image 2024-11-20 at 1.46.08 PM.jpeg",
+      "/assets/images-wm/Hogar/Mesa hexágono/Mesa hexágono portada.webp",
+      "/assets/images-wm/Hogar/Mesa hexágono/Comparación Mesa hexágono.webp",
+      "/assets/images-wm/Hogar/Mesa hexágono/WhatsApp Image 2024-11-20 at 1.46.08 PM.webp",
     ],
     tiempoEntrega: "48 hrs",
   },
@@ -568,7 +568,7 @@ export const PRODUCTS: Product[] = [
       "Fácil de colocar y retirar en segundos",
     ],
     imagen:
-      "/assets/images/Hogar/Mesa ping pong/Funda mesa ping pong.png",
+      "/assets/images-wm/Hogar/Mesa ping pong/Funda mesa ping pong.webp",
     tiempoEntrega: "24 a 48 hrs",
   },
   {
@@ -593,7 +593,7 @@ export const PRODUCTS: Product[] = [
       "Protección contra lluvia, polvo, humedad y sol directo",
     ],
     imagen:
-      "/assets/images/Hogar/Pantalla/T.v..png",
+      "/assets/images-wm/Hogar/Pantalla/T.v..webp",
     popular: true,
     tiempoEntrega: "24 a 48 hrs",
   },
@@ -617,14 +617,14 @@ export const PRODUCTS: Product[] = [
       "Lavable, reutilizable y ecológica",
     ],
     imagen:
-      "/assets/images/Hogar/Bolsa/Bolsas.png",
+      "/assets/images-wm/Hogar/Bolsa/Bolsas.webp",
     colores: [
       {
         id: "azul-mezclilla",
         nombre: "Azul Mezclilla",
         hex: "#3b5f9e",
         imagenes: [
-          "/assets/images/Hogar/Bolsa/1.-Bolsas Azul portada.png",
+          "/assets/images-wm/Hogar/Bolsa/1.-Bolsas Azul portada.webp",
         ],
       },
       {
@@ -632,8 +632,8 @@ export const PRODUCTS: Product[] = [
         nombre: "Azul Rey",
         hex: "#1d4ed8",
         imagenes: [
-          "/assets/images/Hogar/Bolsa/Bolsa 1/Bolsa mezclilla.png",
-          "/assets/images/Hogar/Bolsa/Bolsa 1/WhatsApp Image 2024-11-22 at 12.18.29 PM.png",
+          "/assets/images-wm/Hogar/Bolsa/Bolsa 1/Bolsa mezclilla.webp",
+          "/assets/images-wm/Hogar/Bolsa/Bolsa 1/WhatsApp Image 2024-11-22 at 12.18.29 PM.webp",
         ],
       },
       {
@@ -641,9 +641,9 @@ export const PRODUCTS: Product[] = [
         nombre: "Verde Olivo",
         hex: "#3f5a2a",
         imagenes: [
-          "/assets/images/Hogar/Bolsa/5. Bolsa verde portada.png",
-          "/assets/images/Hogar/Bolsa/Bolsa 1/Bolsa olivo.png",
-          "/assets/images/Hogar/Bolsa/Bolsa 1/WhatsApp Image 2024-11-22 at 12.18.55 PM.png",
+          "/assets/images-wm/Hogar/Bolsa/5. Bolsa verde portada.webp",
+          "/assets/images-wm/Hogar/Bolsa/Bolsa 1/Bolsa olivo.webp",
+          "/assets/images-wm/Hogar/Bolsa/Bolsa 1/WhatsApp Image 2024-11-22 at 12.18.55 PM.webp",
         ],
       },
       {
@@ -651,8 +651,8 @@ export const PRODUCTS: Product[] = [
         nombre: "Verde Esmeralda",
         hex: "#0f8a6a",
         imagenes: [
-          "/assets/images/Hogar/Bolsa/Bolsa 1/Bolsa Verde.png",
-          "/assets/images/Hogar/Bolsa/Bolsa 1/WhatsApp Image 2024-11-22 at 12.18.05 PM.png",
+          "/assets/images-wm/Hogar/Bolsa/Bolsa 1/Bolsa Verde.webp",
+          "/assets/images-wm/Hogar/Bolsa/Bolsa 1/WhatsApp Image 2024-11-22 at 12.18.05 PM.webp",
         ],
       },
       {
@@ -660,9 +660,9 @@ export const PRODUCTS: Product[] = [
         nombre: "Rosa",
         hex: "#c0397a",
         imagenes: [
-          "/assets/images/Hogar/Bolsa/8.- Portada Bolsa rosa.png",
-          "/assets/images/Hogar/Bolsa/Bolsa 1/Bolsa rosa.png",
-          "/assets/images/Hogar/Bolsa/Bolsa 1/WhatsApp Image 2024-11-22 at 12.19.59 PM.png",
+          "/assets/images-wm/Hogar/Bolsa/8.- Portada Bolsa rosa.webp",
+          "/assets/images-wm/Hogar/Bolsa/Bolsa 1/Bolsa rosa.webp",
+          "/assets/images-wm/Hogar/Bolsa/Bolsa 1/WhatsApp Image 2024-11-22 at 12.19.59 PM.webp",
         ],
       },
     ],
@@ -883,59 +883,5 @@ export const PRODUCTS: Product[] = [
     imagen:
       "/assets/images/Vehiculos/FundaParaBicicleta_BICH.webp",
     tiempoEntrega: "24 hrs",
-  },
-
-  // =========================================================================
-  // --- CATEGORÍA 4: FUNDAS PERSONALIZADAS A MEDIDA ---
-  // =========================================================================
-  {
-    id: "personalizada-industrial",
-    nombre: "Funda a la Medida para Maquinaria y Generadores Eléctricos",
-    categoria: "personalizadas",
-    categoriaLabel: "Fundas Personalizadas",
-    descripcionCorta:
-      "Confección sobre plano o toma de medidas en sitio. Lonas vinílicas de uso rudo industrial.",
-    descripcionLarga:
-      "Solución personalizada para plantas de luz, compresores, tableros de control y maquinaria en plantas fabriles u obras de construcción. Diseñadas con velcro de alta adherencia, orificios para cables o mangueras y rotulación opcional.",
-    medidasSugeridas: [
-      "Generador portátil 5kVA - 10kVA",
-      "Planta de luz estacionaria 20kVA - 100kVA",
-      "Medidas exactas según plano o fotos de tu equipo",
-    ],
-    caracteristicas: [
-      "Lona vinílica impermeable uso rudo calibre industrial",
-      "Aperturas con solapas de inspección rápida con velcro",
-      "Ojillos perimetrales galvanizados cada 40 cm",
-      "Opciones retardantes al fuego (opcional)",
-    ],
-    imagen:
-      "/assets/images/Hogar/Mesa ping pong/Funda mesa ping pong.png",
-    popular: true,
-    tiempoEntrega: "3 a 5 días hábiles",
-  },
-  {
-    id: "personalizada-muebles-especiales",
-    nombre: "Funda para Mobiliario Especial, Jacuzzis y Equipamiento",
-    categoria: "personalizadas",
-    categoriaLabel: "Fundas Personalizadas",
-    descripcionCorta:
-      "Patronaje artesanal para cualquier silueta geométrica, equipo delicado o mobiliario de autor.",
-    descripcionLarga:
-      "¿Tienes un mueble curvo, un jacuzzi exterior, una mesa especial o un equipo sensible al polvo? Nuestro equipo de maestros confeccionistas en Guadalajara desarrolla el patrón exclusivo que garantiza una cobertura impecable y estética.",
-    medidasSugeridas: [
-      "Jacuzzi / Tina de hidromasaje exterior",
-      "Mesa o barra de terraza con silueta especial",
-      "Cualquier especificación milimétrica a convenir",
-    ],
-    caracteristicas: [
-      "Levantamiento de medidas guiado por WhatsApp con fotos",
-      "Acabados invisibles o vivos en color contrastante",
-      "Opciones afelpadas o impermeables de uso rudo",
-      "Garantía de ajuste 100% exacto",
-    ],
-    imagen:
-      "/assets/images/Hogar/Mesa hexágono/WhatsApp Image 2024-11-20 at 1.46.08 PM.jpeg",
-    popular: true,
-    tiempoEntrega: "3 a 5 días hábiles",
   },
 ];

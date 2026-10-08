@@ -16,6 +16,7 @@ import {
 import { PRODUCTS, CATEGORIES, type Product, type CategoryId } from "@/data/products";
 import ProductCard from "./ProductCard";
 import ProductModal from "./ProductModal";
+import CustomQuoteBuilder from "./CustomQuoteBuilder";
 
 interface CatalogSectionProps {
   initialCategory?: CategoryId;
@@ -169,31 +170,73 @@ export default function CatalogSection({ initialCategory = "todas" }: CatalogSec
 
             {/* Contador de Resultados */}
             <div className="w-full sm:w-auto text-left sm:text-right text-xs font-semibold text-text-secondary">
-              Mostrando{" "}
-              <span className="text-brand font-bold">{filteredProducts.length}</span>{" "}
-              {filteredProducts.length === 1 ? "solución encontrada" : "soluciones encontradas"}
+              {selectedCategory === "personalizadas" ? (
+                <span className="text-accent font-bold">Patronaje & Confección sobre pedido</span>
+              ) : (
+                <>
+                  Mostrando{" "}
+                  <span className="text-brand font-bold">{filteredProducts.length}</span>{" "}
+                  {filteredProducts.length === 1 ? "solución encontrada" : "soluciones encontradas"}
+                </>
+              )}
             </div>
           </div>
         </div>
 
-        {/* Grid de Productos */}
-        {filteredProducts.length > 0 ? (
-          <motion.div
-            layout
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
-          >
-            <AnimatePresence>
-              {filteredProducts.map((product) => (
-                <ProductCard
-                  key={product.id}
-                  product={product}
-                  onOpenModal={handleOpenModal}
-                />
-              ))}
-            </AnimatePresence>
-          </motion.div>
+        {/* Contenido: Si es categoría personalizadas, mostramos el configurador interactivo a medida */}
+        {selectedCategory === "personalizadas" ? (
+          <CustomQuoteBuilder />
+        ) : filteredProducts.length > 0 ? (
+          <>
+            <motion.div
+              layout
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+            >
+              <AnimatePresence>
+                {filteredProducts.map((product) => (
+                  <ProductCard
+                    key={product.id}
+                    product={product}
+                    onOpenModal={handleOpenModal}
+                  />
+                ))}
+              </AnimatePresence>
+            </motion.div>
+
+            {/* Banner inferior para invitar a cotización personalizada cuando ven todas */}
+            <div className="mt-14 bg-white rounded-3xl border border-border-light p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+              <div className="flex items-start sm:items-center gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-accent/10 text-accent flex items-center justify-center flex-shrink-0">
+                  <Ruler className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="text-base sm:text-lg font-bold text-brand">
+                    ¿Buscas una funda con dimensiones específicas o maquinaria?
+                  </h4>
+                  <p className="text-xs sm:text-sm text-text-secondary mt-0.5">
+                    Describe tu proyecto y te enviamos presupuesto formal por WhatsApp sin compromiso.
+                  </p>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => {
+                  setSelectedCategory("personalizadas");
+                  window.scrollTo({
+                    top: document.getElementById("catalogo-productos")?.offsetTop || 0,
+                    behavior: "smooth",
+                  });
+                }}
+                className="px-6 py-3 rounded-xl bg-brand hover:bg-brand-light text-white text-xs sm:text-sm font-bold shadow-md transition-all flex items-center gap-2 whitespace-nowrap cursor-pointer"
+              >
+                <Sparkles className="w-4 h-4 text-accent" />
+                <span>Diseñar Funda a Medida</span>
+              </button>
+            </div>
+          </>
         ) : (
-          /* Estado Vacío cuando no hay resultados */
+          /* Estado Vacío cuando no hay resultados de búsqueda */
           <div className="bg-white rounded-3xl border border-dashed border-border-light p-12 text-center max-w-lg mx-auto">
             <div className="w-16 h-16 mx-auto mb-4 bg-accent/10 rounded-2xl flex items-center justify-center">
               <Sparkles className="w-8 h-8 text-accent" />
@@ -205,15 +248,14 @@ export default function CatalogSection({ initialCategory = "todas" }: CatalogSec
               Recuerda que confeccionamos cualquier tipo de funda o cubierta con patronaje 100%
               personalizado para maquinaria, muebles especiales o vehículos.
             </p>
-            <a
-              href="https://wa.me/5213314008921?text=Hola,%20estoy%20buscando%20una%20funda%20con%20medidas%20especiales%20que%20no%20encontré%20en%20el%20catálogo."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-accent hover:bg-accent-hover text-white text-xs sm:text-sm font-bold shadow-md transition-all"
+            <button
+              type="button"
+              onClick={() => setSelectedCategory("personalizadas")}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-accent hover:bg-accent-hover text-white text-xs sm:text-sm font-bold shadow-md transition-all cursor-pointer"
             >
-              <MessageCircle className="w-4 h-4" />
-              <span>Cotizar Funda Especial por WhatsApp</span>
-            </a>
+              <Ruler className="w-4 h-4" />
+              <span>Abrir Cotizador a la Medida</span>
+            </button>
           </div>
         )}
 

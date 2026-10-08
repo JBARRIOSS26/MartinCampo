@@ -46,10 +46,10 @@ export default function ProductCard({ product, onOpenModal }: ProductCardProps) 
       className="group bg-white rounded-2xl border border-border-light overflow-hidden flex flex-col shadow-sm hover:shadow-xl hover:border-brand/20 transition-all duration-300"
     >
       {/* Contenedor de Imagen */}
-      <div className="relative aspect-[4/3] w-full bg-surface-gray overflow-hidden p-2 flex items-center justify-center">
+      <div className="relative aspect-[4/3] w-full bg-white overflow-hidden p-2 flex items-center justify-center border-b border-border-light/60">
         {/* Placeholder mientras carga */}
         {!imageLoaded && (
-          <div className="absolute inset-0 bg-surface-gray animate-pulse flex items-center justify-center pointer-events-none">
+          <div className="absolute inset-0 bg-white animate-pulse flex items-center justify-center pointer-events-none">
             <ShieldCheck className="w-8 h-8 text-text-muted/30" />
           </div>
         )}

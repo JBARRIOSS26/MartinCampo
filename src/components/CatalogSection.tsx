@@ -97,7 +97,7 @@ export default function CatalogSection({ initialCategory = "todas" }: CatalogSec
   };
 
   return (
-    <section id="catalogo-productos" className="py-16 sm:py-24 bg-surface-gray border-t border-border-light">
+    <section id="catalogo-productos" className="py-16 sm:py-24 bg-gradient-to-b from-cyan-50/25 via-slate-50 to-orange-50/25 border-t border-border-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Encabezado de la Sección */}
@@ -133,13 +133,13 @@ export default function CatalogSection({ initialCategory = "todas" }: CatalogSec
                 <button
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id)}
-                  className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all flex-shrink-0 ${
+                  className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all flex-shrink-0 cursor-pointer ${
                     isActive
-                      ? "bg-brand text-white shadow-md shadow-brand/20"
-                      : "bg-surface-gray text-text-secondary hover:text-brand hover:bg-border-light/40"
+                      ? "bg-accent text-white shadow-md shadow-accent/25"
+                      : "bg-surface-gray text-text-secondary hover:text-brand hover:bg-orange-50/60"
                   }`}
                 >
-                  <Icon className={`w-4 h-4 ${isActive ? "text-accent" : "text-text-muted"}`} />
+                  <Icon className={`w-4 h-4 ${isActive ? "text-white" : "text-text-muted"}`} />
                   <span>{cat.label}</span>
                 </button>
               );

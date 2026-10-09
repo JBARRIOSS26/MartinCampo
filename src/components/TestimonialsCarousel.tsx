@@ -8,9 +8,8 @@ import {
   ChevronLeft,
   ChevronRight,
   ShieldCheck,
-  Building2,
-  UserCheck,
   HeartHandshake,
+  Sparkles,
 } from "lucide-react";
 
 interface Testimonial {
@@ -121,20 +120,26 @@ export default function TestimonialsCarousel() {
 
   return (
     <section className="py-20 sm:py-28 bg-surface-gray border-t border-border-light relative overflow-hidden">
+      {/* Resplandor decorativo con colores del logo */}
+      <div className="absolute -top-24 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-24 left-1/4 w-96 h-96 bg-teal/15 rounded-full blur-3xl pointer-events-none" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Encabezado */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand/5 border border-brand/10 mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-50 border border-orange-200 mb-4 shadow-xs">
             <HeartHandshake className="w-4 h-4 text-accent" />
-            <span className="text-xs font-bold text-brand uppercase tracking-widest">
+            <span className="text-xs font-bold text-accent uppercase tracking-widest">
               Experiencias y Casos de Éxito
             </span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand tracking-tight mb-4">
             Clientes Satisfechos y{" "}
-            <span className="text-accent">Socios Comerciales</span>
+            <span className="bg-gradient-to-r from-accent via-orange-500 to-teal bg-clip-text text-transparent">
+              Socios Comerciales
+            </span>
           </h2>
 
           <p className="text-base sm:text-lg text-text-secondary leading-relaxed">
@@ -143,7 +148,7 @@ export default function TestimonialsCarousel() {
           </p>
 
           {/* Filtros de Testimonios */}
-          <div className="flex items-center justify-center gap-2 mt-6">
+          <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
             {(
               [
                 { id: "todos", label: "Todos los Testimonios" },
@@ -159,8 +164,8 @@ export default function TestimonialsCarousel() {
                 }}
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                   filter === btn.id
-                    ? "bg-brand text-white shadow-md shadow-brand/20"
-                    : "bg-white text-text-secondary hover:text-brand border border-border-light"
+                    ? "bg-accent text-white shadow-md shadow-accent/25"
+                    : "bg-white text-text-secondary hover:text-brand border border-border-light hover:border-accent/40"
                 }`}
               >
                 {btn.label}
@@ -169,10 +174,10 @@ export default function TestimonialsCarousel() {
           </div>
         </div>
 
-        {/* Carrusel de Testimonio Destacado */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <div className="relative bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-border-light">
-            <Quote className="absolute top-6 right-6 sm:top-10 sm:right-10 w-16 h-16 text-brand/5 pointer-events-none" />
+        {/* Único Recuadro Dinámico de Testimonio (Limpio y sin duplicados) */}
+        <div className="max-w-4xl mx-auto">
+          <div className="relative bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-border-light ring-1 ring-black/[0.03]">
+            <Quote className="absolute top-6 right-6 sm:top-10 sm:right-10 w-20 h-20 text-accent/10 pointer-events-none" />
 
             <AnimatePresence mode="wait">
               <motion.div
@@ -185,16 +190,20 @@ export default function TestimonialsCarousel() {
               >
                 {/* Estrellas y Highlight */}
                 <div className="flex flex-wrap items-center justify-between gap-3">
-                  <div className="flex items-center gap-1">
-                    {[...Array(current.stars)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-5 h-5 fill-amber-400 text-amber-400"
-                      />
-                    ))}
+                  <div className="flex items-center gap-1.5 bg-amber-50 px-3 py-1.5 rounded-xl border border-amber-200">
+                    <div className="flex items-center">
+                      {[...Array(current.stars)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className="w-4.5 h-4.5 fill-amber-400 text-amber-400"
+                        />
+                      ))}
+                    </div>
+                    <span className="text-xs font-bold text-amber-900">5.0 / 5.0</span>
                   </div>
 
-                  <span className="px-3 py-1 rounded-full bg-accent/10 text-accent font-bold text-xs uppercase tracking-wider">
+                  <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-accent/10 text-accent font-bold text-xs uppercase tracking-wider border border-accent/20">
+                    <Sparkles className="w-3.5 h-3.5" />
                     {current.highlight}
                   </span>
                 </div>
@@ -205,9 +214,9 @@ export default function TestimonialsCarousel() {
                 </blockquote>
 
                 {/* Autor y Organización */}
-                <div className="pt-4 border-t border-border-light/80 flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-2xl bg-brand/5 border border-brand/10 flex items-center justify-center text-brand font-extrabold text-base">
+                <div className="pt-5 border-t border-border-light flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div className="flex items-center gap-3.5">
+                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand to-brand-light text-white flex items-center justify-center font-extrabold text-lg shadow-md shadow-brand/20">
                       {current.author.charAt(0)}
                     </div>
                     <div>
@@ -226,8 +235,8 @@ export default function TestimonialsCarousel() {
                     </div>
                   </div>
 
-                  <div className="hidden sm:flex items-center gap-1.5 text-xs font-semibold text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full border border-emerald-200">
-                    <ShieldCheck className="w-4 h-4 flex-shrink-0" />
+                  <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200 w-fit">
+                    <ShieldCheck className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                     <span>Testimonio Verificado</span>
                   </div>
                 </div>
@@ -235,7 +244,7 @@ export default function TestimonialsCarousel() {
             </AnimatePresence>
 
             {/* Controles de Navegación del Carrusel */}
-            <div className="mt-8 flex items-center justify-between pt-6 border-t border-border-light/60">
+            <div className="mt-8 flex items-center justify-between pt-6 border-t border-border-light">
               <div className="flex items-center gap-1.5">
                 {filteredList.map((_, idx) => (
                   <button
@@ -256,7 +265,7 @@ export default function TestimonialsCarousel() {
                   type="button"
                   onClick={handlePrev}
                   aria-label="Testimonio anterior"
-                  className="w-10 h-10 rounded-xl bg-surface-gray hover:bg-brand hover:text-white text-text-secondary flex items-center justify-center transition-all cursor-pointer border border-border-light"
+                  className="w-10 h-10 rounded-xl bg-surface-gray hover:bg-accent hover:text-white text-text-secondary flex items-center justify-center transition-all cursor-pointer border border-border-light"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
@@ -264,63 +273,12 @@ export default function TestimonialsCarousel() {
                   type="button"
                   onClick={handleNext}
                   aria-label="Testimonio siguiente"
-                  className="w-10 h-10 rounded-xl bg-surface-gray hover:bg-brand hover:text-white text-text-secondary flex items-center justify-center transition-all cursor-pointer border border-border-light"
+                  className="w-10 h-10 rounded-xl bg-surface-gray hover:bg-accent hover:text-white text-text-secondary flex items-center justify-center transition-all cursor-pointer border border-border-light"
                 >
                   <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* ======================================================== */}
-        {/* Grid de Todos los Casos para Transparencia Total */}
-        {/* ======================================================== */}
-        <div>
-          <h3 className="text-xl font-bold text-brand text-center mb-8">
-            Resumen de Clientes Destacados
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {testimonials.map((t) => (
-              <div
-                key={t.author}
-                className="bg-white p-6 rounded-2xl border border-border-light hover:border-brand/30 transition-all duration-300 shadow-sm hover:shadow-md flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-accent">
-                      {t.organization || t.role}
-                    </span>
-                    <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="w-3.5 h-3.5 fill-amber-400 text-amber-400"
-                        />
-                      ))}
-                    </div>
-                  </div>
-                  <p className="text-xs sm:text-sm text-text-secondary leading-relaxed mb-4 italic">
-                    "{t.quote}"
-                  </p>
-                </div>
-                <div className="pt-3 border-t border-border-light flex items-center justify-between">
-                  <div>
-                    <span className="font-bold text-brand text-sm block">
-                      {t.author}
-                    </span>
-                    <span className="text-[11px] text-text-secondary block">
-                      {t.role}
-                    </span>
-                  </div>
-                  {t.organization ? (
-                    <Building2 className="w-4 h-4 text-brand/40" />
-                  ) : (
-                    <UserCheck className="w-4 h-4 text-brand/40" />
-                  )}
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </div>

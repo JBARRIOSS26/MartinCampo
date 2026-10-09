@@ -544,7 +544,6 @@ export const PRODUCTS: Product[] = [
     imagenesSecundarias: [
       "/assets/images-wm/Hogar/Mesa hexágono/Mesa hexágono portada.webp",
       "/assets/images-wm/Hogar/Mesa hexágono/Comparación Mesa hexágono.webp",
-      "/assets/images-wm/Hogar/Mesa hexágono/WhatsApp Image 2024-11-20 at 1.46.08 PM.webp",
     ],
     tiempoEntrega: "48 hrs",
   },
@@ -726,6 +725,147 @@ export const PRODUCTS: Product[] = [
       "/assets/images/Hogar/BolsaParaSabanas_BOSA_01.webp",
     ],
     tiempoEntrega: "24 hrs",
+  },
+  {
+    id: "funda-consolas-videojuegos",
+    nombre: "Fundas Protectoras para Consolas de Videojuegos",
+    categoria: "hogar",
+    categoriaLabel: "Para el Hogar y Jardín",
+    descripcionCorta:
+      "Protección antipolvo y líquidos para PlayStation 5, PS5 Slim y Nintendo Switch OLED en tela Oxford o vinipiel.",
+    descripcionLarga:
+      "Fundas a la medida exacta para resguardar tus consolas de videojuegos del polvo, pelusa y accidentes con líquidos cuando no están en uso. Fabricadas en tela Oxford impermeable o en lujoso vinipiel afelpado interior que evita cualquier rasguño en los paneles brillantes o carcasas de tu consola.",
+    medidasSugeridas: [
+      "PlayStation 5 / PS5 Slim (Formato vertical con ranura para cables)",
+      "Nintendo Switch y Switch OLED (Cubre consola montada en Dock)",
+      "A la medida para Xbox Series X / Series S",
+    ],
+    caracteristicas: [
+      "Ranura posterior trasera para cables sin necesidad de desconectar",
+      "Disponible en tela impermeable Oxford y vinipiel afelpado suave",
+      "Evita acumulación de polvo en ventiladores y circuitos",
+      "Confección a la medida exacta de cada consola",
+    ],
+    imagen:
+      "/assets/images-wm/Hogar/Consolas videojuegos/playstation 5 slim sin lectora.webp",
+    imagenesSecundarias: [
+      "/assets/images-wm/Hogar/Consolas videojuegos/playstation 5 slim sin lectora.webp",
+    ],
+    popular: true,
+    tiempoEntrega: "24 hrs",
+  },
+  {
+    id: "funda-equipal-tradicional",
+    nombre: "Funda Protectora para Equipal Tradicional de Jardín",
+    categoria: "hogar",
+    categoriaLabel: "Para el Hogar y Jardín",
+    descripcionCorta:
+      "Protector impermeable a la silueta tradicional del equipal artesanal para intemperie, terrazas y jardines.",
+    descripcionLarga:
+      "El equipal artesanal de vara y cuero requiere protección especial contra el sol que reseca la piel y la lluvia que pudre la madera. Confeccionamos protectores anatómicos calibre 6 impermeables que envuelven el respaldo curvo y la base cónica del equipal, prolongando su vida útil por años.",
+    medidasSugeridas: [
+      "Equipal Silla Clásica (Diámetro 60 cm x Altura 80 cm)",
+      "Equipal Sillón Grande / Cantinero (Diámetro 70 cm x Altura 85 cm)",
+      "A la medida exacta de tus equipales",
+    ],
+    caracteristicas: [
+      "100% Impermeable y resistente al sol UV",
+      "Diseño curvo anatómico respetando la forma del equipal",
+      "Evita resequedad de la piel y pudrición de la madera/vara",
+      "Fácil colocación y amarre antiviento inferior",
+    ],
+    imagen:
+      "/assets/images-wm/Hogar/Equipal/1.- equipal portada.webp",
+    imagenesSecundarias: [
+      "/assets/images-wm/Hogar/Equipal/1.- equipal portada.webp",
+    ],
+    tiempoEntrega: "24 a 48 hrs",
+  },
+  {
+    id: "funda-mesa-redonda",
+    nombre: "Protector Impermeable para Mesa Redonda de Jardín y Terraza",
+    categoria: "hogar",
+    categoriaLabel: "Para el Hogar y Jardín",
+    descripcionCorta:
+      "Cubierta circular impermeable de alta resistencia calibre 6 con caída perimetral para mesas de comedor exterior.",
+    descripcionLarga:
+      "Cubierta circular con patronaje exacto para mesas redondas de jardín, terraza y restaurantes. Fabricada en lona impermeable calibre 6 de alta resistencia que soporta lluvias torrenciales y sol directo, evitando que la madera se infle o el cristal se manche de sarro.",
+    medidasSugeridas: [
+      "Mesa Redonda 4 Personas (Diámetro 1.00 m a 1.20 m)",
+      "Mesa Redonda 6-8 Personas (Diámetro 1.40 m a 1.60 m)",
+      "Mesa Redonda Grande con Sillas (Diámetro 1.80 m a 2.20 m)",
+      "A la medida exacta de tu mesa o conjunto exterior",
+    ],
+    caracteristicas: [
+      "Lona impermeable de gama alta calibre 6",
+      "Corte circular uniforme con caída de protección",
+      "Costuras náuticas termoselladas y reforzadas",
+      "Cordón perimetral de ajuste inferior contra vientos",
+    ],
+    imagen:
+      "/assets/images-wm/Hogar/Mesa Redonda/Portada mesa redonda.webp",
+    imagenesSecundarias: [
+      "/assets/images-wm/Hogar/Mesa Redonda/Portada mesa redonda.webp",
+    ],
+    popular: true,
+    tiempoEntrega: "24 a 48 hrs",
+  },
+  {
+    id: "funda-enmicadora-oficina",
+    nombre: "Funda Protectora para Enmicadora Térmica",
+    categoria: "hogar",
+    categoriaLabel: "Para el Hogar y Jardín",
+    descripcionCorta:
+      "Protector antipolvo a la medida para enmicadoras de oficina tipo Office Depot LM401 y similares.",
+    descripcionLarga:
+      "Las enmicadoras térmicas sufren constantes fallas por acumulación de pelusa y polvo en los rodillos de calor. Nuestra funda a la medida garantiza un sellado limpio contra el polvo, derrames y humedad, prolongando la vida útil y calidad de tus enmicados.",
+    medidasSugeridas: [
+      "Enmicadora Carta / Oficio Estándar (Office Depot LM401)",
+      "Enmicadoras profesionales de uso rudo continuo",
+      "Confección a la medida de tu equipo",
+    ],
+    caracteristicas: [
+      "Protege rodillos internos contra pelusa y polvo fino",
+      "Material de fácil limpieza y alta durabilidad",
+      "Corte a la medida exacta con costuras reforzadas",
+      "Diseño compacto que ocupa mínimo espacio",
+    ],
+    imagen:
+      "/assets/images-wm/Hogar/Enmicadora/Enmicadora Office Depot LM401mod.2.webp",
+    imagenesSecundarias: [
+      "/assets/images-wm/Hogar/Enmicadora/Enmicadora Office Depot LM401mod.2.webp",
+    ],
+    tiempoEntrega: "24 hrs",
+  },
+  {
+    id: "funda-impresoras-oficina",
+    nombre: "Fundas Protectoras para Impresoras y Multifuncionales",
+    categoria: "hogar",
+    categoriaLabel: "Para el Hogar y Jardín",
+    descripcionCorta:
+      "Protección a la medida para equipos HP, Brother, Canon y Epson en tela impermeable o elegante vinipiel.",
+    descripcionLarga:
+      "El polvo es el enemigo principal de los cabezales, rodillos y bandejas de alimentación de las impresoras. Confeccionamos fundas protectoras específicas para las líneas más populares: HP Smart Tank y LaserJet, Brother DCP y MFC, Canon y Epson EcoTank. Disponibles en tela calibre ligero lavable o en vinipiel afelpado de alta estética ejecutiva.",
+    medidasSugeridas: [
+      "HP Smart Tank (Modelos 520, 580, 615, 670, 720, 750)",
+      "Brother Multifuncionales (DCP-T520W, T720DW, L2660, MFC-J6940DW)",
+      "Epson EcoTank (L1210, L3150, L3210, L3250, L4260, L6171)",
+      "Canon Pixma y LaserJet comerciales",
+      "A la medida de cualquier impresora, plotter o multifuncional",
+    ],
+    caracteristicas: [
+      "Protege cabezales, inyectores y rodillos del polvo ambiental",
+      "Disponible en tela impermeable o vinipiel afelpado de lujo",
+      "Abertura posterior para paso libre de cables",
+      "Modelos para HP, Brother, Canon, Epson y marcas industriales",
+    ],
+    imagen:
+      "/assets/images-wm/Hogar/Impresora/Hp chica/Portada Hp 580 mod2.webp",
+    imagenesSecundarias: [
+      "/assets/images-wm/Hogar/Impresora/Hp chica/Portada Hp 580 mod2.webp",
+    ],
+    popular: true,
+    tiempoEntrega: "24 a 48 hrs",
   },
 
   // =========================================================================

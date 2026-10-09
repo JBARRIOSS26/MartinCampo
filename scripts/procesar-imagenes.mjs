@@ -62,12 +62,22 @@ async function crearLogoMarcaAgua() {
     .toBuffer({ resolveWithObject: true });
 }
 
+// Filtro estricto para NO incluir imágenes que contengan medidas
+const REGEX_MEDIDA = /medida|meida|\bmed\b|\bmed\./i;
+
 function listar(dir) {
   const res = [];
   for (const f of fs.readdirSync(dir)) {
     const p = path.join(dir, f);
-    if (fs.statSync(p).isDirectory()) res.push(...listar(p));
-    else if (EXTENSIONES.has(path.extname(f).toLowerCase())) res.push(p);
+    if (fs.statSync(p).isDirectory()) {
+      res.push(...listar(p));
+    } else if (EXTENSIONES.has(path.extname(f).toLowerCase())) {
+      // Omitir cualquier archivo con medidas en el nombre
+      if (REGEX_MEDIDA.test(f)) {
+        continue;
+      }
+      res.push(p);
+    }
   }
   return res;
 }
@@ -96,6 +106,11 @@ async function procesar(file, logo) {
 
   const rel = path.relative(IMAGES, file);
   const destino = path.join(OUT, rel).replace(/\.(png|jpe?g)$/i, ".webp");
+  
+  if (fs.existsSync(destino)) {
+    return path.relative(ROOT, destino);
+  }
+
   fs.mkdirSync(path.dirname(destino), { recursive: true });
 
   await sharp({ create: { width: SIZE, height: SIZE, channels: 3, background: "#ffffff" } })

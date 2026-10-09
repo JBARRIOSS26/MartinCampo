@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import {
   ArrowRight,
-  CheckCircle2,
   Star,
   ShieldCheck,
   Droplets,
@@ -35,106 +34,97 @@ const categoriasMarquee = [
   { icon: ShoppingBag, label: "Bolsas y Portatrajes" },
 ];
 
-// Productos reales que "flotan" alrededor de la imagen principal
-const productosFlotantes = [
-  {
-    src: "/assets/images/Lavadoras y Secadoras/FundaParaCargaFrontal_AzulMarino_newempam_01.webp",
-    nombre: "Carga Frontal",
-    detalle: "Grabado azul marino",
-    className: "-left-6 xl:-left-14 top-[38%]",
-    delay: 0.9,
-    floatDuration: 5,
-  },
-  {
-    src: "/assets/images-wm/Hogar/Futbolito/Futbolito portada.webp",
-    nombre: "Futbolito",
-    detalle: "Calibre 6 impermeable",
-    className: "-right-4 xl:-right-10 top-6",
-    delay: 1.05,
-    floatDuration: 6,
-  },
-];
-
 export default function HeroSection() {
+
   return (
     <section
       id="inicio"
-      className="relative isolate overflow-hidden bg-brand text-white"
+      className="relative isolate overflow-hidden bg-gradient-to-b from-orange-50/40 via-white to-sky-50/30 text-text-primary border-b border-orange-100/60"
     >
-      {/* ====== Fondo con profundidad ====== */}
-      <div aria-hidden className="absolute inset-0 -z-10">
-        {/* Gradiente base */}
-        <div className="absolute inset-0 bg-[radial-gradient(120%_80%_at_0%_0%,#1d4a75_0%,#0f2942_45%,#081a2c_100%)]" />
-
-        {/* Orbes de luz animados (colores del logotipo) */}
+      {/* ====== Fondos luminosos y orbes con la paleta viva del logotipo ====== */}
+      <div aria-hidden className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+        {/* Orbe Cálido Naranja / Mandarina (Color principal del logo) */}
         <motion.div
-          className="absolute -top-40 -right-32 w-[560px] h-[560px] rounded-full bg-accent/30 blur-[120px]"
-          animate={{ scale: [1, 1.15, 1], opacity: [0.55, 0.8, 0.55] }}
-          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute -bottom-48 -left-40 w-[620px] h-[620px] rounded-full bg-teal/25 blur-[130px]"
-          animate={{ scale: [1.1, 1, 1.1], opacity: [0.5, 0.75, 0.5] }}
-          transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -top-32 -left-24 w-[520px] h-[520px] rounded-full bg-gradient-to-br from-orange-400/25 via-amber-300/20 to-transparent blur-[110px]"
+          animate={{ scale: [1, 1.12, 1], x: [0, 20, 0] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         />
 
-        {/* Retícula técnica con desvanecido */}
-        <div className="absolute inset-0 hero-grid opacity-[0.12]" />
+        {/* Orbe Turquesa / Cyan Vibrante (Color secundario del logo) */}
+        <motion.div
+          className="absolute top-1/4 -right-28 w-[580px] h-[580px] rounded-full bg-gradient-to-bl from-cyan-400/25 via-teal-300/20 to-transparent blur-[120px]"
+          animate={{ scale: [1.1, 1, 1.1], y: [0, -30, 0] }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        />
 
-        {/* Hexágonos decorativos (forma del logotipo) */}
+        {/* Retícula decorativa suave */}
+        <div
+          className="absolute inset-0 opacity-[0.035]"
+          style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, #f97316 1px, transparent 0)`,
+            backgroundSize: "36px 36px",
+          }}
+        />
+
+        {/* Hexágonos flotantes sutiles (evocando el isotipo del cubo/hexágono) */}
         <motion.svg
           viewBox="0 0 100 100"
-          className="absolute top-20 left-[46%] w-24 h-24 text-teal/30 hidden lg:block"
+          className="absolute top-16 right-[48%] w-20 h-20 text-cyan-400/25 hidden xl:block"
           animate={{ rotate: 360 }}
-          transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
         >
-          <polygon points="50,3 93,27 93,73 50,97 7,73 7,27" fill="none" stroke="currentColor" strokeWidth="3" />
+          <polygon points="50,4 93,28 93,72 50,96 7,72 7,28" fill="none" stroke="currentColor" strokeWidth="2.5" />
         </motion.svg>
         <motion.svg
           viewBox="0 0 100 100"
-          className="absolute bottom-32 right-[44%] w-14 h-14 text-accent/40 hidden lg:block"
+          className="absolute bottom-28 left-[45%] w-14 h-14 text-orange-400/25 hidden xl:block"
           animate={{ rotate: -360 }}
           transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
         >
-          <polygon points="50,3 93,27 93,73 50,97 7,73 7,27" fill="currentColor" />
+          <polygon points="50,4 93,28 93,72 50,96 7,72 7,28" fill="none" stroke="currentColor" strokeWidth="2.5" />
         </motion.svg>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 sm:pt-20 lg:pt-24 pb-24 sm:pb-28">
-        <div className="grid lg:grid-cols-2 gap-14 lg:gap-12 items-center">
-          {/* ====== Columna izquierda: mensaje ====== */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14 lg:pt-16 pb-16 sm:pb-20">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          
+          {/* ====== Columna Izquierda: Mensaje Comercial (Luminoso, Colorido y Directo) ====== */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="relative z-10"
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="lg:col-span-6 xl:col-span-6 relative z-10"
           >
+            {/* Badge distintivo colorido */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-md mb-7"
+              transition={{ delay: 0.15, duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-orange-100 to-cyan-50 border border-orange-200/80 mb-6 shadow-xs"
             >
-              <span className="relative flex w-2 h-2">
-                <span className="absolute inline-flex w-full h-full rounded-full bg-teal opacity-75 animate-ping" />
-                <span className="relative inline-flex w-2 h-2 rounded-full bg-teal" />
+              <span className="relative flex w-2.5 h-2.5">
+                <span className="absolute inline-flex w-full h-full rounded-full bg-cyan-500 opacity-75 animate-ping" />
+                <span className="relative inline-flex w-2.5 h-2.5 rounded-full bg-cyan-600" />
               </span>
-              <span className="text-xs font-semibold tracking-wide text-white/90">
-                Confección textil de alta gama hecha en México
+              <span className="text-xs font-bold tracking-wide text-brand">
+                Taller Textil Especializado • Guadalajara, México
               </span>
             </motion.div>
 
-            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold leading-[1.05] tracking-tight mb-6">
+            {/* Título Principal con los Colores del Logo */}
+            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold leading-[1.08] tracking-tight text-brand mb-5">
               Fundas y Cubiertas
               <br />
-              <span className="hero-gradient-text">de Alta Resistencia</span>
+              <span className="bg-gradient-to-r from-orange-500 via-amber-500 to-cyan-600 bg-clip-text text-transparent">
+                de Alta Resistencia
+              </span>
               <br />
-              <span className="relative inline-block">
+              <span className="relative inline-block text-brand">
                 Hechas a la Medida
                 <motion.svg
                   viewBox="0 0 300 12"
                   preserveAspectRatio="none"
-                  className="absolute left-0 -bottom-2 w-full h-3 text-teal"
+                  className="absolute left-0 -bottom-2 w-full h-3 text-cyan-500"
                   initial={{ pathLength: 0 }}
                 >
                   <motion.path
@@ -145,194 +135,168 @@ export default function HeroSection() {
                     strokeLinecap="round"
                     initial={{ pathLength: 0 }}
                     animate={{ pathLength: 1 }}
-                    transition={{ delay: 0.9, duration: 0.9, ease: "easeInOut" }}
+                    transition={{ delay: 0.7, duration: 0.8, ease: "easeInOut" }}
                   />
                 </motion.svg>
               </span>
             </h1>
 
-            <p className="text-base sm:text-lg text-white/70 leading-relaxed mb-9 max-w-xl">
+            {/* Descripción limpia y persuasiva */}
+            <p className="text-base sm:text-lg text-text-secondary leading-relaxed mb-8 max-w-xl">
               Protección 100% impermeable con telas de gama alta calibre 6 y vinipiel afelpado.
-              Diseñadas para lavadoras, asadores, futbolitos, billares, pantallas y vehículos.
-              Cotización personalizada directa por WhatsApp.
+              Confeccionadas a la medida exacta para electrodomésticos, vehículos, asadores, mesas de juego y mobiliario de terraza.
             </p>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-3.5 mb-10">
+            {/* CTAs con Contraste y Energía */}
+            <div className="flex flex-col sm:flex-row gap-3.5 mb-9">
               <motion.a
                 id="hero-cta-catalogo"
                 href="#catalogo-productos"
-                whileHover={{ scale: 1.03 }}
+                whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="group relative inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-accent hover:bg-accent-hover text-white font-bold rounded-xl transition-colors shadow-lg shadow-accent/30 overflow-hidden"
+                className="group relative inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-accent hover:bg-accent-hover text-white font-bold rounded-xl transition-all shadow-lg shadow-orange-500/25 overflow-hidden text-sm sm:text-base"
               >
-                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/25 to-transparent" />
                 <span className="relative">Explorar Catálogo</span>
-                <ArrowRight className="relative w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="relative w-4.5 h-4.5 group-hover:translate-x-1 transition-transform" />
               </motion.a>
+
               <motion.a
                 id="hero-cta-whatsapp"
                 href="https://wa.me/5213314008921?text=Hola,%20quisiera%20cotizar%20una%20funda%20a%20la%20medida."
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.03 }}
+                whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 hover:bg-[#25d366] border border-white/20 hover:border-[#25d366] backdrop-blur-md text-white font-bold rounded-xl transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#25d366] hover:bg-[#20ba59] text-white font-bold rounded-xl transition-all shadow-md shadow-[#25d366]/20 text-sm sm:text-base"
               >
                 <MessageCircle className="w-5 h-5" />
                 <span>Cotizar por WhatsApp</span>
               </motion.a>
             </div>
 
-            {/* Métricas */}
-            <div className="flex items-stretch gap-6 sm:gap-8 mb-8">
+            {/* Métricas de Confianza */}
+            <div className="flex items-stretch gap-6 sm:gap-8 mb-7 pt-2 border-t border-orange-100">
               {stats.map((s, i) => (
-                <motion.div
+                <div
                   key={s.label}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 + i * 0.12, duration: 0.5 }}
-                  className={i > 0 ? "pl-6 sm:pl-8 border-l border-white/15" : ""}
+                  className={i > 0 ? "pl-6 sm:pl-8 border-l border-orange-100" : ""}
                 >
-                  <p className="text-2xl sm:text-3xl font-extrabold text-white leading-none">
+                  <p className="text-2xl sm:text-3xl font-extrabold text-brand leading-none">
                     {s.value}
                   </p>
-                  <p className="text-xs sm:text-sm text-white/55 mt-1.5">{s.label}</p>
-                </motion.div>
+                  <p className="text-xs sm:text-sm text-text-secondary mt-1">{s.label}</p>
+                </div>
               ))}
             </div>
 
-            {/* Prueba social */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6">
+            {/* Calificación y Garantía */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 text-sm">
               <div className="flex items-center gap-2">
                 <div className="flex">
                   {[1, 2, 3, 4, 5].map((i) => (
                     <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                   ))}
                 </div>
-                <span className="text-sm font-bold">4.9/5</span>
-                <span className="text-xs text-white/55">valoración de clientes</span>
+                <span className="font-extrabold text-brand">4.9/5</span>
+                <span className="text-xs text-text-secondary">satisfacción comprobada</span>
               </div>
-              <div className="flex items-center gap-1.5 text-sm text-white/70">
-                <ShieldCheck className="w-4 h-4 text-teal" />
-                <span className="font-medium">Garantía directa del fabricante</span>
+              <div className="flex items-center gap-1.5 text-text-secondary">
+                <ShieldCheck className="w-4 h-4 text-cyan-600 flex-shrink-0" />
+                <span className="font-medium text-xs sm:text-sm">Garantía directa del fabricante</span>
               </div>
             </div>
           </motion.div>
 
-          {/* ====== Columna derecha: vitrina visual ====== */}
+          {/* ====== Columna Derecha: Imagen Destacada Limpia Sin Recuadro ====== */}
           <motion.div
-            initial={{ opacity: 0, x: 30, scale: 0.97 }}
+            initial={{ opacity: 0, x: 30, scale: 0.96 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
-            className="relative lg:pl-6"
+            transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
+            className="lg:col-span-6 xl:col-span-6 relative flex flex-col items-center justify-center"
           >
-            {/* Marco con borde degradado */}
-            <div className="relative rounded-[2rem] p-[2px] bg-gradient-to-br from-accent via-white/20 to-teal shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
-              <div className="relative aspect-[4/3] rounded-[calc(2rem-2px)] overflow-hidden bg-white p-4 sm:p-6 group flex items-center justify-center">
-                <img
-                  src="/assets/images/Logo/portada auto 8.png"
-                  alt="Fundas y cubiertas de alta protección automotriz y hogar Martín del Campo"
-                  className="w-full h-full object-contain object-center transform group-hover:scale-105 transition-transform duration-700 select-none"
-                />
+            {/* Resplandor ambiental de marca (suave, sin recuadro rígido) */}
+            <div
+              aria-hidden
+              className="absolute -inset-4 sm:-inset-10 bg-gradient-to-tr from-orange-400/25 via-cyan-400/20 to-transparent rounded-full blur-3xl pointer-events-none -z-10"
+            />
 
-                <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3 pointer-events-none">
-                  <div className="bg-brand/85 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/10 shadow-lg">
-                    <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-accent">
-                      <Sparkles className="w-3 h-3" />
-                      Línea Automotriz & Hogar
-                    </span>
-                    <p className="text-xs sm:text-sm font-bold text-white drop-shadow-sm mt-0.5">
-                      Protección Térmica e Impermeable
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {/* Imagen oficial sin recuadro / sin marco oscuro */}
+            <div className="relative w-full max-w-lg lg:max-w-xl mx-auto flex items-center justify-center p-2 sm:p-4">
+              <motion.img
+                src="/assets/images/Logo/hero-auto-transparente.webp"
+                alt="Fundas y cubiertas automotrices a la medida Martín del Campo"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.4 }}
+                className="w-full h-auto max-h-[460px] object-contain drop-shadow-[0_20px_40px_rgba(15,41,66,0.18)]"
+              />
 
-            {/* Tarjetas de producto flotantes (fondo blanco, foto real) */}
-            {productosFlotantes.map((p) => (
+              {/* Badge Flotante 1: 100% Impermeable */}
               <motion.div
-                key={p.nombre}
-                initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ delay: p.delay, duration: 0.5 }}
-                className={`absolute hidden md:block ${p.className}`}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.4 }}
+                className="absolute top-2 left-2 sm:-left-3 z-10"
               >
-                <motion.a
-                  href="#catalogo-productos"
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: p.floatDuration, repeat: Infinity, ease: "easeInOut" }}
-                  whileHover={{ scale: 1.06, rotate: -1 }}
-                  className="flex items-center gap-3 bg-white text-text-primary rounded-2xl p-2.5 pr-4 shadow-2xl ring-1 ring-black/5"
-                >
-                  <img
-                    src={p.src}
-                    alt={p.nombre}
-                    className="w-16 h-16 rounded-xl object-contain bg-white border border-border-light"
-                  />
-                  <div>
-                    <p className="text-sm font-bold leading-tight">{p.nombre}</p>
-                    <p className="text-[11px] text-text-secondary">{p.detalle}</p>
-                    <p className="text-[11px] font-semibold text-accent mt-0.5">Ver modelos →</p>
+                <div className="rounded-2xl px-3.5 py-2 sm:py-2.5 shadow-lg flex items-center gap-2.5 bg-white/95 border border-cyan-200/90 backdrop-blur-md">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 bg-cyan-50 rounded-xl flex items-center justify-center text-cyan-600">
+                    <Droplets className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                </motion.a>
+                  <div>
+                    <p className="text-xs font-bold text-brand">100% Impermeable</p>
+                    <p className="text-[10px] text-text-secondary">Calibre 6 y Vinipiel</p>
+                  </div>
+                </div>
               </motion.div>
-            ))}
 
-            {/* Badge 100% Impermeable */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.7, duration: 0.5 }}
-              className="absolute left-4 sm:left-10 -top-5"
-            >
-              <div className="rounded-2xl px-4 py-3 shadow-xl flex items-center gap-2.5 bg-white/10 border border-white/20 backdrop-blur-xl">
-                <div className="w-9 h-9 bg-sky-400/20 rounded-xl flex items-center justify-center">
-                  <Droplets className="w-5 h-5 text-sky-300" />
+              {/* Badge Flotante 2: Ajuste Milimétrico */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.75, duration: 0.4 }}
+                className="absolute bottom-2 right-2 sm:-right-3 z-10"
+              >
+                <div className="rounded-2xl px-3.5 py-2 sm:py-2.5 shadow-lg flex items-center gap-2.5 bg-white/95 border border-orange-200/90 backdrop-blur-md">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 bg-orange-50 rounded-xl flex items-center justify-center text-accent">
+                    <Crosshair className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-brand">Ajuste Milimétrico</p>
+                    <p className="text-[10px] text-text-secondary">Patronaje a la medida</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-xs font-bold">100% Impermeable</p>
-                  <p className="text-[10px] text-white/60">Calibre 6 y Vinipiel</p>
-                </div>
-              </div>
-            </motion.div>
+              </motion.div>
 
-            {/* Badge Ajuste milimétrico */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.85, duration: 0.5 }}
-              className="absolute right-4 sm:right-8 -bottom-6"
-            >
-              <div className="rounded-2xl px-4 py-3 shadow-xl flex items-center gap-2.5 bg-white text-text-primary">
-                <div className="w-9 h-9 bg-orange-100 rounded-xl flex items-center justify-center">
-                  <Crosshair className="w-5 h-5 text-accent" />
+              {/* Badge Flotante Superior: Fabricación Nacional */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.9, duration: 0.4 }}
+                className="absolute -top-3 right-4 sm:right-6 hidden sm:block z-10"
+              >
+                <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-white text-[11px] font-bold shadow-md shadow-orange-500/25">
+                  <Sparkles className="w-3.5 h-3.5 text-white" />
+                  <span>Fabricación Directa de Taller</span>
                 </div>
-                <div>
-                  <p className="text-xs font-bold">Ajuste Milimétrico</p>
-                  <p className="text-[10px] text-text-secondary">Patronaje artesanal</p>
-                </div>
-                <CheckCircle2 className="w-4 h-4 text-emerald-500 ml-1" />
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
 
-      {/* ====== Cinta de categorías en movimiento ====== */}
-      <div className="relative border-t border-white/10 bg-white/[0.04] backdrop-blur-sm">
-        <div className="hero-marquee-mask overflow-hidden py-4">
+      {/* ====== La ÚNICA cinta de información en movimiento de la página ====== */}
+      <div className="relative border-t border-orange-200/50 bg-white/90 backdrop-blur-md shadow-xs">
+        <div className="hero-marquee-mask overflow-hidden py-3.5">
           <div className="animate-ticker flex w-max">
             {[...categoriasMarquee, ...categoriasMarquee].map((c, i) => (
               <a
                 key={i}
                 href="#catalogo-productos"
-                className="flex items-center gap-2.5 px-7 text-sm font-semibold text-white/70 hover:text-white transition-colors whitespace-nowrap"
+                className="flex items-center gap-2 px-6 text-xs sm:text-sm font-bold text-brand/80 hover:text-accent transition-colors whitespace-nowrap"
               >
-                <c.icon className="w-4.5 h-4.5 text-accent" />
-                {c.label}
-                <span className="ml-7 text-teal/50">⬢</span>
+                <c.icon className="w-4 h-4 text-accent" />
+                <span>{c.label}</span>
+                <span className="ml-6 text-cyan-500 font-bold">⬢</span>
               </a>
             ))}
           </div>

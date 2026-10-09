@@ -103,7 +103,7 @@ export default function CategoryGrid() {
   };
 
   return (
-    <section id="catalogo" className="py-16 sm:py-20 lg:py-24 bg-white">
+    <section id="catalogo" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-orange-50/30 via-white to-cyan-50/30 border-b border-orange-100/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -113,11 +113,14 @@ export default function CategoryGrid() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12 lg:mb-16"
         >
-          <span className="inline-block px-4 py-1.5 bg-accent/10 text-accent text-xs font-bold tracking-widest uppercase rounded-full mb-4">
+          <span className="inline-block px-4 py-1.5 bg-orange-100 border border-orange-200 text-accent text-xs font-bold tracking-widest uppercase rounded-full mb-4 shadow-xs">
             Catálogo Especializado
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-text-primary tracking-tight">
-            Nuestras Soluciones
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand tracking-tight">
+            Nuestras Soluciones{" "}
+            <span className="bg-gradient-to-r from-orange-500 via-amber-500 to-cyan-600 bg-clip-text text-transparent">
+              de Protección
+            </span>
           </h2>
           <p className="mt-3 text-text-secondary text-base sm:text-lg max-w-2xl mx-auto">
             Fundas y cubiertas diseñadas para proteger lo que más importa. Haz clic en cualquier
@@ -125,42 +128,72 @@ export default function CategoryGrid() {
           </p>
         </motion.div>
 
-        {/* Grid */}
+        {/* Grid de Tarjetas Coloridas con la paleta de la marca */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
-          {categories.map((cat) => {
+          {categories.map((cat, idx) => {
             const CtaIcon = cat.ctaIcon || ArrowRight;
+            // Estilos específicos para distribuir los 3 colores del logo
+            const cardStyles = [
+              {
+                border: "border-sky-200 hover:border-sky-400 hover:shadow-sky-500/10",
+                bg: "bg-gradient-to-b from-sky-50/80 via-white to-white",
+                bar: "bg-gradient-to-r from-cyan-500 to-sky-600",
+                tagBg: "bg-sky-50 text-sky-800 border-sky-200/60",
+                cta: "text-sky-600 group-hover:text-sky-700",
+              },
+              {
+                border: "border-cyan-200 hover:border-cyan-400 hover:shadow-cyan-500/10",
+                bg: "bg-gradient-to-b from-cyan-50/80 via-white to-white",
+                bar: "bg-gradient-to-r from-cyan-400 to-teal-500",
+                tagBg: "bg-cyan-50 text-cyan-800 border-cyan-200/60",
+                cta: "text-cyan-600 group-hover:text-cyan-700",
+              },
+              {
+                border: "border-orange-200 hover:border-orange-400 hover:shadow-orange-500/10",
+                bg: "bg-gradient-to-b from-orange-50/80 via-white to-white",
+                bar: "bg-gradient-to-r from-orange-500 to-amber-500",
+                tagBg: "bg-orange-50 text-orange-800 border-orange-200/60",
+                cta: "text-accent group-hover:text-accent-hover",
+              },
+              {
+                border: "border-amber-200 hover:border-amber-400 hover:shadow-amber-500/10",
+                bg: "bg-gradient-to-b from-amber-50/80 via-white to-white",
+                bar: "bg-gradient-to-r from-brand to-cyan-600",
+                tagBg: "bg-amber-50 text-amber-900 border-amber-200/60",
+                cta: "text-brand group-hover:text-accent",
+              },
+            ][idx % 4];
+
             return (
               <motion.div
                 key={cat.id}
                 variants={cardVariants}
                 whileHover={{ y: -6, transition: { duration: 0.25 } }}
                 onClick={() => handleSelectCategory(cat.id)}
-                className="group relative bg-white border border-border-light rounded-2xl p-6 cursor-pointer transition-all duration-300 hover:shadow-xl hover:shadow-brand/5 hover:border-brand/20 select-none"
+                className={`group relative rounded-3xl p-6 cursor-pointer transition-all duration-300 shadow-md hover:shadow-xl select-none border ${cardStyles.border} ${cardStyles.bg} flex flex-col justify-between`}
               >
-                {/* Gradient bg on hover */}
-                <div
-                  className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${cat.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
-                />
+                {/* Barra de color superior en cada tarjeta */}
+                <div className={`h-1.5 w-14 rounded-full ${cardStyles.bar} mb-5`} />
 
-                <div className="relative z-10">
+                <div>
                   {/* Icon */}
                   <div
-                    className={`w-12 h-12 ${cat.iconBg} rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110`}
+                    className={`w-14 h-14 ${cat.iconBg} rounded-2xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110 shadow-xs`}
                   >
-                    <cat.icon className={`w-6 h-6 ${cat.iconColor}`} />
+                    <cat.icon className={`w-7 h-7 ${cat.iconColor}`} />
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="text-base font-bold text-text-primary mb-2 group-hover:text-brand transition-colors">
+                  <h3 className="text-lg font-extrabold text-brand mb-2 group-hover:text-accent transition-colors">
                     {cat.title}
                   </h3>
-                  <p className="text-sm text-text-secondary leading-relaxed mb-4">
+                  <p className="text-xs sm:text-sm text-text-secondary leading-relaxed mb-4">
                     {cat.description}
                   </p>
 
@@ -169,19 +202,21 @@ export default function CategoryGrid() {
                     {cat.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-0.5 text-[11px] font-medium bg-surface-gray text-text-secondary rounded-md border border-border-light/50"
+                        className={`px-2.5 py-0.5 text-[11px] font-semibold rounded-md border ${cardStyles.tagBg}`}
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
+                </div>
 
-                  {/* CTA Link */}
-                  <div className="flex items-center gap-1.5 text-sm font-semibold text-accent group-hover:text-accent-hover transition-colors">
-                    <CtaIcon className="w-3.5 h-3.5" />
+                {/* CTA Link */}
+                <div className={`pt-3 border-t border-black/[0.04] flex items-center justify-between text-sm font-bold ${cardStyles.cta} transition-colors`}>
+                  <div className="flex items-center gap-1.5">
+                    <CtaIcon className="w-4 h-4" />
                     <span>{cat.cta}</span>
-                    <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
                   </div>
+                  <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                 </div>
               </motion.div>
             );

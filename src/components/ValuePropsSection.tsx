@@ -64,8 +64,8 @@ const metrics = [
 export default function ValuePropsSection() {
   return (
     <section
-      id="empresa"
-      className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-surface-gray"
+      id="diferenciadores"
+      className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-surface-gray border-t border-border-light"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -76,76 +76,66 @@ export default function ValuePropsSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12 lg:mb-16"
         >
-          <span className="inline-block px-4 py-1.5 bg-brand/5 text-brand text-xs font-bold tracking-widest uppercase rounded-full mb-4">
-            Diferenciadores
+          <span className="inline-block px-4 py-1.5 bg-orange-100/80 border border-orange-200 text-accent text-xs font-bold tracking-widest uppercase rounded-full mb-4">
+            Diferenciadores Clave
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-text-primary tracking-tight">
-            ¿Por qué elegirnos?
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-brand tracking-tight">
+            ¿Por qué elegir Martín del Campo?
           </h2>
           <p className="mt-3 text-text-secondary text-base sm:text-lg max-w-2xl mx-auto">
-            Más de 15 años perfeccionando el arte de la protección textil. Cada
-            funda es una pieza de ingeniería artesanal.
+            Más de 15 años perfeccionando el patronaje y confección de cubiertas protectoras para intemperie.
           </p>
         </motion.div>
 
-        {/* Value Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
-          {valueProps.map((prop, i) => (
-            <motion.div
-              key={prop.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              whileHover={{ y: -4 }}
-              className="group bg-white rounded-2xl border border-border-light p-7 transition-all duration-300 hover:shadow-xl hover:shadow-brand/5 hover:border-brand/15"
-            >
-              <div
-                className={`w-14 h-14 ${prop.color} rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110`}
-              >
-                <prop.icon className={`w-7 h-7 ${prop.iconColor}`} />
-              </div>
-              <h3 className="text-lg font-bold text-text-primary mb-2.5">
-                {prop.title}
-              </h3>
-              <p className="text-sm text-text-secondary leading-relaxed">
-                {prop.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+        {/* Value Cards Coloridas */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {valueProps.map((prop, i) => {
+            const themes = [
+              {
+                border: "border-sky-200/90 hover:border-sky-400 hover:shadow-sky-500/10",
+                bg: "bg-gradient-to-b from-sky-50/80 via-white to-white",
+                bar: "bg-gradient-to-r from-blue-600 to-cyan-500",
+              },
+              {
+                border: "border-cyan-200/90 hover:border-cyan-400 hover:shadow-cyan-500/10",
+                bg: "bg-gradient-to-b from-cyan-50/80 via-white to-white",
+                bar: "bg-gradient-to-r from-cyan-400 to-teal-500",
+              },
+              {
+                border: "border-orange-200/90 hover:border-orange-400 hover:shadow-orange-500/10",
+                bg: "bg-gradient-to-b from-orange-50/80 via-white to-white",
+                bar: "bg-gradient-to-r from-orange-500 to-amber-500",
+              },
+            ][i % 3];
 
-        {/* Trust Metrics Bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="bg-brand rounded-2xl p-6 sm:p-8"
-        >
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {metrics.map((metric, i) => (
+            return (
               <motion.div
-                key={metric.label}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                key={prop.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.1 * i, duration: 0.4 }}
-                className="flex items-center gap-3"
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                whileHover={{ y: -4 }}
+                className={`group rounded-3xl border ${themes.border} ${themes.bg} p-7 transition-all duration-300 hover:shadow-xl shadow-sm flex flex-col justify-between`}
               >
-                <div className="w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <metric.icon className="w-5 h-5 text-accent" />
-                </div>
                 <div>
-                  <p className="text-sm font-bold text-white leading-tight">
-                    {metric.label}
+                  <div className={`h-1.5 w-12 rounded-full ${themes.bar} mb-5`} />
+                  <div
+                    className={`w-14 h-14 ${prop.color} rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110 shadow-xs`}
+                  >
+                    <prop.icon className={`w-7 h-7 ${prop.iconColor}`} />
+                  </div>
+                  <h3 className="text-xl font-extrabold text-brand mb-2.5">
+                    {prop.title}
+                  </h3>
+                  <p className="text-sm text-text-secondary leading-relaxed">
+                    {prop.description}
                   </p>
-                  <p className="text-xs text-white/60 mt-0.5">{metric.sublabel}</p>
                 </div>
               </motion.div>
-            ))}
-          </div>
-        </motion.div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

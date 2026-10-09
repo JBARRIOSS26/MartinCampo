@@ -41,11 +41,11 @@ export default function Footer() {
           
           {/* Columna 1: Corporativo & Logotipo Oficial */}
           <div className="space-y-4">
-            <div className="bg-white p-3 rounded-2xl inline-block shadow-md">
+            <div className="bg-white p-3.5 rounded-2xl inline-block shadow-md">
               <img
-                src="/assets/images/Logo/logo-martin-campo.jpg"
+                src="/assets/images/Logo/logo-transparent.png"
                 alt="Martín del Campo Fundas y Cubiertas"
-                className="h-10 sm:h-12 w-auto object-contain"
+                className="h-12 sm:h-14 w-auto object-contain"
               />
             </div>
 

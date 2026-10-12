@@ -31,7 +31,7 @@ const CATEGORIAS_MEDIDA = [
 
 const TIPOS_PROTECCION = [
   { id: "intemperie", label: "100% Intemperie Calibre 6", badge: "Más Solicitado", desc: "Lona impermeable contra lluvias torrenciales y rayos UV" },
-  { id: "afelpado", label: "Nivipiel Negro Afelpado", badge: "Máximo Cuidado", desc: "Nivipiel color negro con interior afelpado suave que no raya pinturas finas, cristales ni acabados delicados" },
+  { id: "afelpado", label: "Vinipiel Negro Afelpado", badge: "Máximo Cuidado", desc: "Vinipiel color negro con interior afelpado suave que no raya pinturas finas, cristales ni acabados delicados" },
   { id: "ligero", label: "Poliforro / Antipolvo Comercial", badge: "Uso Interior", desc: "Protección ligera y transpirable para bodegas y talleres" },
 ];
 
@@ -359,7 +359,7 @@ export default function CustomQuoteBuilder() {
                   2
                 </span>
                 <p>
-                  <strong className="text-text-primary">Diseño y cotización cerrada:</strong> Te brindamos precio exacto con opciones de calibre 6, nivipiel negro afelpado o poliforro.
+                  <strong className="text-text-primary">Diseño y cotización cerrada:</strong> Te brindamos precio exacto con opciones de calibre 6, vinipiel negro afelpado o poliforro.
                 </p>
               </div>
 

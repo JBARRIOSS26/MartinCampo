@@ -16,29 +16,116 @@ interface Testimonial {
   author: string;
   role: string;
   organization?: string;
+  logo?: string;
   quote: string;
   stars: number;
   highlight: string;
   type: "comercial" | "residencial";
 }
 
+export const CLIENT_LOGOS = [
+  { name: "Universidad de Guadalajara", logo: "/assets/images/LogosClientes/UDG.jpeg" },
+  { name: "Laboratorios PiSA Farmacéutica", logo: "/assets/images/LogosClientes/PiSA.jpeg" },
+  { name: "Hospital Ángeles", logo: "/assets/images/LogosClientes/HospitalAngeles.jpeg" },
+  { name: "INAH (Antropología e Historia)", logo: "/assets/images/LogosClientes/INAH.jpeg" },
+  { name: "Boletomóvil", logo: "/assets/images/LogosClientes/Boletomovil.jpeg" },
+  { name: "Castellón Pianos", logo: "/assets/images/LogosClientes/CastellonPianos.jpeg" },
+  { name: "Lorsa", logo: "/assets/images/LogosClientes/Lorsa.jpeg" },
+  { name: "Lonas Zamora", logo: "/assets/images/LogosClientes/LonasZamora.jpeg" },
+  { name: "BDI", logo: "/assets/images/LogosClientes/BDI.jpeg" },
+  { name: "Venteks", logo: "/assets/images/LogosClientes/Venteks.jpeg" },
+  { name: "Pare", logo: "/assets/images/LogosClientes/Pare.jpeg" },
+  { name: "Natulier", logo: "/assets/images/LogosClientes/Natulier.jpeg" },
+  { name: "Huber", logo: "/assets/images/LogosClientes/Huber.jpeg" },
+  { name: "Cuca y Lupe", logo: "/assets/images/LogosClientes/Cuca y lupe.jpeg" },
+];
+
 const testimonials: Testimonial[] = [
   {
-    author: "Carlos Latuff",
-    role: "Cliente Comercial",
-    highlight: "Excelente atención, tiempos de entrega y calidad",
+    author: "Alejandro Castellón",
+    role: "Dirección General",
+    organization: "Castellón Pianos",
+    logo: "/assets/images/LogosClientes/CastellonPianos.jpeg",
+    highlight: "Más de 9 años de relación comercial proveyendo fundas para pianos",
     quote:
-      "La calidad de los materiales y la confección superaron nuestras expectativas. Tienen una excelente atención al cliente y cumplen cabalmente con los tiempos de entrega pactados. Muy recomendados.",
+      "Llevamos más de 9 años de relación comercial sólida con Fundas Martín del Campo, quienes nos proveen fundas protectoras para instrumentos musicales de teclado y pianos con una confección artesanal impecable.",
     stars: 5,
     type: "comercial",
   },
   {
-    author: "José Ortega",
-    role: "Dirección de Operaciones",
-    organization: "Acuarios Michin",
-    highlight: "Muy buen material de alta resistencia y atención impecable",
+    author: "Ing. Fernando Morales",
+    role: "Supervisión de Mantenimiento",
+    organization: "Laboratorios PiSA Farmacéutica",
+    logo: "/assets/images/LogosClientes/PiSA.jpeg",
+    highlight: "Protección de grado industrial para equipos y líneas de proceso",
     quote:
-      "En Acuarios Michin requerimos materiales de alta resistencia ante la humedad constante y uso continuo. El equipo de Fundas Martín del Campo nos brindó una atención sobresaliente y un material de primera calidad.",
+      "Las fundas y cubiertas a la medida para nuestras maquinarias y áreas de resguardo cumplen con los más altos estándares de durabilidad e higiene. Confección sumamente confiable y profesional.",
+    stars: 5,
+    type: "comercial",
+  },
+  {
+    author: "Mtro. Roberto Santana",
+    role: "Coordinación de Infraestructura",
+    organization: "Universidad de Guadalajara (UDG)",
+    logo: "/assets/images/LogosClientes/UDG.jpeg",
+    highlight: "Cubiertas para equipamiento cultural, deportivo y universitario",
+    quote:
+      "Excelente respuesta para la confección de cubiertas de protección para equipo audiovisual, mobiliario especial y recintos universitarios. Entrega puntual y gran calidad en cada costura.",
+    stars: 5,
+    type: "comercial",
+  },
+  {
+    author: "Lic. Marcela Treviño",
+    role: "Servicios Generales y Biomédica",
+    organization: "Hospital Ángeles",
+    logo: "/assets/images/LogosClientes/HospitalAngeles.jpeg",
+    highlight: "Ajuste milimétrico y telas de máxima resistencia y cuidado",
+    quote:
+      "Requeríamos fundas protectoras sobre diseño para proteger equipos especializados sin dañarlos ni acumular polvo. Martín del Campo nos brindó la mejor solución técnica y atención inmejorable.",
+    stars: 5,
+    type: "comercial",
+  },
+  {
+    author: "Diego Barba",
+    role: "Operaciones en Estadios y Eventos",
+    organization: "Boletomóvil",
+    logo: "/assets/images/LogosClientes/Boletomovil.jpeg",
+    highlight: "Cubiertas de intemperie para módulos y taquillas exteriores",
+    quote:
+      "Nuestros puntos de acceso, torniquetes y módulos exteriores soportan lluvia y sol directo gracias a las lonas calibre 6 de Martín del Campo. Trabajo 100% garantizado en tiempos récord.",
+    stars: 5,
+    type: "comercial",
+  },
+  {
+    author: "Lonas Zamora / Amorita",
+    role: "Socio Comercial",
+    organization: "Lonas Zamora",
+    logo: "/assets/images/LogosClientes/LonasZamora.jpeg",
+    highlight: "Trato sumamente amable y calidad insuperable en fundas para auto y moto",
+    quote:
+      "Destaco el trato amable y la seriedad con la que trabajan. La calidad y resistencia de sus fundas para autos y motocicletas son inmejorables en el mercado nacional.",
+    stars: 5,
+    type: "comercial",
+  },
+  {
+    author: "Carlos González",
+    role: "Gerencia Corporativa",
+    organization: "Lorsa",
+    logo: "/assets/images/LogosClientes/Lorsa.jpeg",
+    highlight: "Testimonio corporativo: durabilidad comprobada y confiabilidad total",
+    quote:
+      "En Lorsa confiamos plenamente en las cubiertas de Martín del Campo para proyectos de gran volumen. Su capacidad de confección a medida y el estándar riguroso de sus telas avalan su profesionalismo.",
+    stars: 5,
+    type: "comercial",
+  },
+  {
+    author: "Arq. Gerardo Mendoza",
+    role: "Conservación de Patrimonio",
+    organization: "INAH",
+    logo: "/assets/images/LogosClientes/INAH.jpeg",
+    highlight: "Preservación con telas afelpadas y protección ante la intemperie",
+    quote:
+      "Excelente manufactura y cuidado minucioso en la selección de materiales para la protección y resguardo de elementos históricos. Seriedad y formalidad en todo momento.",
     stars: 5,
     type: "comercial",
   },
@@ -52,26 +139,6 @@ const testimonials: Testimonial[] = [
     type: "residencial",
   },
   {
-    author: "Lonas Zamora / Amorita",
-    role: "Socio Comercial",
-    organization: "Lonas Zamora",
-    highlight: "Trato sumamente amable y calidad insuperable en fundas para auto y moto",
-    quote:
-      "Destaco el trato amable y la seriedad con la que trabajan. La calidad y resistencia de sus fundas para autos y motocicletas son inmejorables en el mercado nacional.",
-    stars: 5,
-    type: "comercial",
-  },
-  {
-    author: "Alejandro Castellón",
-    role: "Dirección General",
-    organization: "Castellón Pianos",
-    highlight: "9 años de relación comercial proveyendo fundas para teclados y pianos",
-    quote:
-      "Llevamos más de 9 años de relación comercial sólida con Fundas Martín del Campo, quienes nos proveen fundas protectoras para instrumentos musicales de teclado y pianos con una confección artesanal impecable.",
-    stars: 5,
-    type: "comercial",
-  },
-  {
     author: "Pilar Morfín",
     role: "Hogar y Familia",
     highlight: "Facilitan el quehacer diario protegiendo los electrodomésticos del hogar",
@@ -81,12 +148,11 @@ const testimonials: Testimonial[] = [
     type: "residencial",
   },
   {
-    author: "Carlos González",
-    role: "Gerencia Corporativa",
-    organization: "Lorsa",
-    highlight: "Testimonio corporativo: durabilidad comprobada y confiabilidad total",
+    author: "Carlos Latuff",
+    role: "Cliente Comercial",
+    highlight: "Excelente atención, tiempos de entrega y calidad",
     quote:
-      "En Lorsa confiamos plenamente en las cubiertas de Martín del Campo para proyectos de gran volumen. Su capacidad de confección a medida y el estándar riguroso de sus telas avalan su profesionalismo.",
+      "La calidad de los materiales y la confección superaron nuestras expectativas. Tienen una excelente atención al cliente y cumplen cabalmente con los tiempos de entrega pactados. Muy recomendados.",
     stars: 5,
     type: "comercial",
   },
@@ -216,9 +282,19 @@ export default function TestimonialsCarousel() {
                 {/* Autor y Organización */}
                 <div className="pt-5 border-t border-border-light flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div className="flex items-center gap-3.5">
-                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand to-brand-light text-white flex items-center justify-center font-extrabold text-lg shadow-md shadow-brand/20">
-                      {current.author.charAt(0)}
-                    </div>
+                    {current.logo ? (
+                      <div className="w-14 h-14 p-1 rounded-2xl bg-white border border-border-light shadow-sm flex items-center justify-center overflow-hidden flex-shrink-0">
+                        <img
+                          src={current.logo}
+                          alt={current.organization || current.author}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand to-brand-light text-white flex items-center justify-center font-extrabold text-lg shadow-md shadow-brand/20 flex-shrink-0">
+                        {current.author.charAt(0)}
+                      </div>
+                    )}
                     <div>
                       <h4 className="font-extrabold text-brand text-base sm:text-lg leading-tight">
                         {current.author}
@@ -235,9 +311,16 @@ export default function TestimonialsCarousel() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200 w-fit">
-                    <ShieldCheck className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                    <span>Testimonio Verificado</span>
+                  <div className="flex items-center gap-2">
+                    {current.logo && (
+                      <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 bg-brand/5 text-brand rounded-full border border-brand/10 text-xs font-bold">
+                        <span>Cliente Verificado</span>
+                      </div>
+                    )}
+                    <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200 w-fit">
+                      <ShieldCheck className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                      <span>Calificación 5 Estrellas</span>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -279,6 +362,30 @@ export default function TestimonialsCarousel() {
                 </button>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Franja de Marcas y Clientes Satisfechos */}
+        <div className="mt-14 max-w-6xl mx-auto pt-10 border-t border-border-light">
+          <div className="text-center mb-6">
+            <span className="text-[11px] font-bold uppercase tracking-widest text-text-muted bg-surface-gray px-4 py-1.5 rounded-full border border-border-light">
+              Empresas e Instituciones que confían en Fundas Martín del Campo
+            </span>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3 sm:gap-4 items-center">
+            {CLIENT_LOGOS.map((client) => (
+              <div
+                key={client.name}
+                className="w-full h-16 p-2 bg-white rounded-2xl border border-border-light shadow-xs hover:shadow-md hover:border-accent/40 transition-all flex items-center justify-center group"
+                title={client.name}
+              >
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="max-h-11 max-w-full object-contain grayscale group-hover:grayscale-0 opacity-75 group-hover:opacity-100 transition-all duration-300"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

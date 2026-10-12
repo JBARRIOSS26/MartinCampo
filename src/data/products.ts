@@ -763,16 +763,16 @@ export const PRODUCTS: Product[] = [
     categoria: "hogar",
     categoriaLabel: "Para el Hogar y Jardín",
     descripcionCorta:
-      "Funda protectora a la medida en nivipiel negro afelpado para bocinas tipo torre, bafles y subwoofers.",
+      "Funda protectora a la medida en vinipiel negro afelpado para bocinas tipo torre, bafles y subwoofers.",
     descripcionLarga:
-      "Protege tu bocina torre, bafle o subwoofer de audio del polvo, rayos solares, salpicaduras de agua y rayaduras. Confeccionada en nivipiel de gama alta color negro con interior afelpado suave que cuida el cuerpo, controles y rejillas de tu equipo de sonido.",
+      "Protege tu bocina torre, bafle o subwoofer de audio del polvo, rayos solares, salpicaduras de agua y rayaduras. Confeccionada en vinipiel de gama alta color negro con interior afelpado suave que cuida el cuerpo, controles y rejillas de tu equipo de sonido.",
     medidasSugeridas: [
       "Medida Especial: 92 cm alto x 44 cm frente x 38 cm fondo",
       "Bafle / Bocina Torre estándar (15 pulgadas)",
       "Confección a la medida exacta de tu bocina o subwoofer",
     ],
     caracteristicas: [
-      "Nivipiel color negro con interior afelpado suave anti-rayaduras",
+      "Vinipiel color negro con interior afelpado suave anti-rayaduras",
       "100% Impermeable contra líquidos y derrames accidentales",
       "Barrera efectiva contra polvo y rayos solares",
       "Corte anatómico vertical de fácil colocación",

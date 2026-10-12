@@ -432,7 +432,7 @@ export const PRODUCTS: Product[] = [
       "Ajuste inferior con jareta de amarre",
     ],
     imagen:
-      "/assets/images/Lavadoras y Secadoras/FundaParaLavadoraRedonda_RED.webp",
+      "/assets/images/Lavadoras y Secadoras/Funda para lavadora redonda tradicional.webp",
     tiempoEntrega: "24 hrs",
   },
 
@@ -451,7 +451,8 @@ export const PRODUCTS: Product[] = [
     medidasSugeridas: [
       "Asador Carro / Medio Hexágono (1.54 m largo x 64 cm ancho x 1.29 m alto)",
       "Asador Redondo Grande Kettle (55 cm diámetro x 70 cm alto)",
-      "Asador Redondo Estándar (50 cm diámetro x 70 cm alto)",
+      "Asador Tipo Barril (Modelo 12)",
+      "Asador Eléctrico Compacto tipo Lumin (Modelo 7)",
       "A la medida exacta de tu asador empotrado o móvil",
     ],
     caracteristicas: [
@@ -465,6 +466,8 @@ export const PRODUCTS: Product[] = [
     imagenesSecundarias: [
       "/assets/images-wm/Hogar/Asador/Portada. Asador medio hexágono.webp",
       "/assets/images-wm/Hogar/Asador/Asador portada.webp",
+      "/assets/images-wm/Hogar/Asador/Asador eléctrico Lumin mod 7.webp",
+      "/assets/images-wm/Hogar/Asador/Asador tipo barril mod12.webp",
     ],
     popular: true,
     tiempoEntrega: "24 a 48 hrs",
@@ -753,6 +756,31 @@ export const PRODUCTS: Product[] = [
     ],
     popular: true,
     tiempoEntrega: "24 hrs",
+  },
+  {
+    id: "funda-bafle-buffer",
+    nombre: "Protector para Bocina / Bafle Torre (Buffer)",
+    categoria: "hogar",
+    categoriaLabel: "Para el Hogar y Jardín",
+    descripcionCorta:
+      "Funda protectora a la medida en nivipiel negro afelpado para bocinas tipo torre, bafles y subwoofers.",
+    descripcionLarga:
+      "Protege tu bocina torre, bafle o subwoofer de audio del polvo, rayos solares, salpicaduras de agua y rayaduras. Confeccionada en nivipiel de gama alta color negro con interior afelpado suave que cuida el cuerpo, controles y rejillas de tu equipo de sonido.",
+    medidasSugeridas: [
+      "Medida Especial: 92 cm alto x 44 cm frente x 38 cm fondo",
+      "Bafle / Bocina Torre estándar (15 pulgadas)",
+      "Confección a la medida exacta de tu bocina o subwoofer",
+    ],
+    caracteristicas: [
+      "Nivipiel color negro con interior afelpado suave anti-rayaduras",
+      "100% Impermeable contra líquidos y derrames accidentales",
+      "Barrera efectiva contra polvo y rayos solares",
+      "Corte anatómico vertical de fácil colocación",
+    ],
+    imagen:
+      "/assets/images-wm/Hogar/Buffer/Especial 92 x 44 x 38.webp",
+    popular: true,
+    tiempoEntrega: "24 a 48 hrs",
   },
   {
     id: "funda-equipal-tradicional",

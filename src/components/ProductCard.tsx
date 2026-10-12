@@ -31,7 +31,7 @@ export default function ProductCard({ product, onOpenModal }: ProductCardProps) 
   }, [product.imagen]);
 
   // Mensaje para cotización rápida directa por WhatsApp
-  const whatsappUrl = `https://wa.me/5213314008921?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/5213315722232?text=${encodeURIComponent(
     `Hola, me interesa solicitar cotización del producto: "${product.nombre}" (${product.categoriaLabel}). ¿Podrían darme más información?`
   )}`;
 

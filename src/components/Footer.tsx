@@ -23,7 +23,7 @@ export default function Footer() {
   ];
 
   const enlacesRapidos = [
-    { label: "Cotizador por WhatsApp", href: "https://wa.me/5213314008921" },
+    { label: "Cotizador por WhatsApp", href: "https://wa.me/5213315722232" },
     { label: "Aviso de Privacidad", href: "#" },
     { label: "Términos y Condiciones", href: "#" },
     { label: "Guía de Medición Paso a Paso", href: "#" },
@@ -133,24 +133,49 @@ export default function Footer() {
             {/* Datos de Contacto Directo */}
             <div className="pt-2 border-t border-white/10 space-y-2 text-xs text-white/70">
               <a
-                href="https://wa.me/5213314008921"
+                href="https://wa.me/5213315722232"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-semibold transition-colors"
+                title="Atención exclusiva por WhatsApp"
               >
-                <MessageCircle className="w-4 h-4" />
-                <span>WhatsApp: (33) 1400-8921</span>
+                <MessageCircle className="w-4 h-4 flex-shrink-0" />
+                <span>WhatsApp (Exclusivo): (33) 1572-2232</span>
               </a>
-              <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-accent" />
-                <span>Teléfono Taller: (33) 3812-4090</span>
+              <div className="space-y-1">
+                <a
+                  href="tel:33336144683"
+                  className="flex items-center gap-2 hover:text-white transition-colors"
+                  title="Llamar al taller"
+                >
+                  <Phone className="w-3.5 h-3.5 text-accent flex-shrink-0" />
+                  <span>Tel. Fijo (Llamadas): 33 3361 44683</span>
+                </a>
+                <a
+                  href="tel:3333361151"
+                  className="flex items-center gap-2 hover:text-white transition-colors pl-5.5"
+                  title="Llamar al taller"
+                >
+                  <span>Tel. Fijo (Llamadas): 33 3336 1151</span>
+                </a>
               </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-accent" />
-                <span>contacto@fundasmartindelcampo.com</span>
+              <div className="space-y-1 pt-1">
+                <a
+                  href="mailto:contacto@fundasmartidelcampo.com"
+                  className="flex items-center gap-2 hover:text-white transition-colors"
+                >
+                  <Mail className="w-3.5 h-3.5 text-accent flex-shrink-0" />
+                  <span>contacto@fundasmartidelcampo.com</span>
+                </a>
+                <a
+                  href="mailto:daniela@fundasmartidelcampo.com"
+                  className="flex items-center gap-2 hover:text-white transition-colors pl-5.5"
+                >
+                  <span>daniela@fundasmartidelcampo.com</span>
+                </a>
               </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5 text-accent" />
+              <div className="flex items-center gap-2 pt-1">
+                <MapPin className="w-3.5 h-3.5 text-accent flex-shrink-0" />
                 <span>Guadalajara, Jalisco, México</span>
               </div>
             </div>

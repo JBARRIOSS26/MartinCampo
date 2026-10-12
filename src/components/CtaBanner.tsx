@@ -5,7 +5,7 @@ import { MessageCircle, Zap, ShieldCheck, Truck } from "lucide-react";
 
 export default function CtaBanner() {
   const whatsappUrl =
-    "https://wa.me/5213314008921?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n%20personalizada%20a%20la%20medida.";
+    "https://wa.me/5213315722232?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n%20personalizada%20a%20la%20medida.";
 
   return (
     <section
@@ -57,12 +57,12 @@ export default function CtaBanner() {
             </motion.a>
 
             <motion.a
-              href="tel:3338124090"
+              href="tel:33336144683"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 h-13 bg-transparent border-2 border-white/25 text-white font-semibold rounded-xl hover:bg-white/10 hover:border-white/40 transition-all duration-200 text-sm sm:text-base"
             >
-              <span>Llamar a Asesor: (33) 3812-4090</span>
+              <span>Llamar a Taller: 33 3361 44683</span>
             </motion.a>
           </div>
 

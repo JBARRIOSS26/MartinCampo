@@ -30,13 +30,12 @@ const CATEGORIAS_MEDIDA = [
 ];
 
 const TIPOS_PROTECCION = [
-  { id: "intemperie", label: "100% Intemperie Calibre 6", badge: "Más Solicitado", desc: "Lona impermeable uso rudo contra lluvias torrenciales y rayos UV" },
-  { id: "afelpado", label: "Vinipiel Afelpado Premium", badge: "Máximo Cuidado", desc: "Interior suave que no raya pinturas finas, cristales ni acabados de autor" },
-  { id: "ligero", label: "Oxford / Antipolvo Comercial", badge: "Uso Interior", desc: "Protección ligera y transpirable para bodegas y talleres" },
+  { id: "intemperie", label: "100% Intemperie Calibre 6", badge: "Más Solicitado", desc: "Lona impermeable contra lluvias torrenciales y rayos UV" },
+  { id: "afelpado", label: "Nivipiel Negro Afelpado", badge: "Máximo Cuidado", desc: "Nivipiel color negro con interior afelpado suave que no raya pinturas finas, cristales ni acabados delicados" },
+  { id: "ligero", label: "Poliforro / Antipolvo Comercial", badge: "Uso Interior", desc: "Protección ligera y transpirable para bodegas y talleres" },
 ];
 
 const ADICIONALES = [
-  { id: "cierres", label: "Cierres náuticos reforzados" },
   { id: "velcro", label: "Solapas con velcro de alta adherencia" },
   { id: "ojillos", label: "Ojillos perimetrales para amarrar" },
   { id: "resorte", label: "Elástico / resorte inferior ajustable" },
@@ -49,7 +48,7 @@ export default function CustomQuoteBuilder() {
   const [ancho, setAncho] = useState("");
   const [alto, setAlto] = useState("");
   const [detalles, setDetalles] = useState("");
-  const [adicionalesSeleccionados, setAdicionalesSeleccionados] = useState<string[]>(["cierres"]);
+  const [adicionalesSeleccionados, setAdicionalesSeleccionados] = useState<string[]>(["velcro"]);
   const [tieneFotos, setTieneFotos] = useState(false);
 
   const toggleAdicional = (id: string) => {
@@ -62,7 +61,7 @@ export default function CustomQuoteBuilder() {
     CATEGORIAS_MEDIDA.find((c) => c.id === tipoSeleccionado)?.label || "Proyecto a la medida";
 
   const getProteccionLabel = () =>
-    TIPOS_PROTECCION.find((p) => p.id === proteccion)?.label || "Uso rudo";
+    TIPOS_PROTECCION.find((p) => p.id === proteccion)?.label || "Intemperie Calibre 6";
 
   const construirMensajeWhatsApp = () => {
     const medidasTexto =
@@ -96,7 +95,7 @@ export default function CustomQuoteBuilder() {
       .filter((line) => line !== "")
       .join("\n");
 
-    return `https://wa.me/5213314008921?text=${encodeURIComponent(mensaje)}`;
+    return `https://wa.me/5213315722232?text=${encodeURIComponent(mensaje)}`;
   };
 
   return (
@@ -360,7 +359,7 @@ export default function CustomQuoteBuilder() {
                   2
                 </span>
                 <p>
-                  <strong className="text-text-primary">Diseño y cotización cerrada:</strong> Te brindamos precio exacto con opciones de lona marina, vinipiel o afelpado.
+                  <strong className="text-text-primary">Diseño y cotización cerrada:</strong> Te brindamos precio exacto con opciones de calibre 6, nivipiel negro afelpado o poliforro.
                 </p>
               </div>
 

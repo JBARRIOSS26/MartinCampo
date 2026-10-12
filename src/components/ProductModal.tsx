@@ -116,7 +116,7 @@ export default function ProductModal({
     .filter(Boolean)
     .join("\n");
 
-  const whatsappUrl = `https://wa.me/5213314008921?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/5213315722232?text=${encodeURIComponent(
     whatsappDetails
   )}`;
 
@@ -402,11 +402,11 @@ export default function ProductModal({
                 </a>
 
                 <a
-                  href="tel:3338124090"
+                  href="tel:33336144683"
                   className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-surface-gray hover:bg-border-light/50 text-text-primary font-semibold text-xs transition-colors border border-border-light"
                 >
                   <PhoneCall className="w-4 h-4 text-brand" />
-                  <span>Llamar a Asesor: (33) 3812-4090</span>
+                  <span>Llamar a Taller: 33 3361 44683</span>
                 </a>
               </div>
             </div>

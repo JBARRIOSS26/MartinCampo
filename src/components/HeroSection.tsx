@@ -163,7 +163,7 @@ export default function HeroSection() {
 
               <motion.a
                 id="hero-cta-whatsapp"
-                href="https://wa.me/5213314008921?text=Hola,%20quisiera%20cotizar%20una%20funda%20a%20la%20medida."
+                href="https://wa.me/5213315722232?text=Hola,%20quisiera%20cotizar%20una%20funda%20a%20la%20medida."
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}

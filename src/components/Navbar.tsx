@@ -171,7 +171,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2.5">
             {/* Botón WhatsApp Directo */}
             <a
-              href="https://wa.me/5213314008921?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20y%20cotizaci%C3%B3n%20de%20sus%20fundas."
+              href="https://wa.me/5213315722232?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20y%20cotizaci%C3%B3n%20de%20sus%20fundas."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-3.5 h-10 rounded-xl bg-[#25d366]/10 hover:bg-[#25d366] text-[#25d366] hover:text-white border border-[#25d366]/30 font-bold text-xs transition-all shadow-sm"
@@ -276,14 +276,14 @@ export default function Navbar() {
 
               <div className="pt-3 border-t border-border-light mt-3 space-y-2">
                 <a
-                  href="https://wa.me/5213314008921?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20cotizaci%C3%B3n%20de%20sus%20fundas."
+                  href="https://wa.me/5213315722232?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20cotizaci%C3%B3n%20de%20sus%20fundas."
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMobileOpen(false)}
                   className="flex items-center justify-center gap-2 w-full h-11 bg-[#25d366] hover:bg-[#20ba59] text-white text-sm font-bold rounded-xl shadow-md transition-colors"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  <span>Cotizar por WhatsApp: (33) 1400-8921</span>
+                  <span>Cotizar por WhatsApp: (33) 1572-2232</span>
                 </a>
               </div>
             </div>

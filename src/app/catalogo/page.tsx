@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Catálogo Completo de Fundas y Cubiertas | Martín del Campo",
   description:
-    "Explora nuestro catálogo de fundas para lavadoras, vehículos, muebles de jardín y confección a medida. Telas de grado marino 100% impermeables.",
+    "Explora nuestro catálogo de fundas para lavadoras, vehículos, muebles de jardín y confección a medida. Lonas calibre 6 y vinipiel afelpado 100% impermeables.",
 };
 
 export default function CatalogoPage() {

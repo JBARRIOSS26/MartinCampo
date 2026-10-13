@@ -41,9 +41,9 @@ export const PRODUCTS: Product[] = [
     categoria: "lavadoras",
     categoriaLabel: "Lavadoras y Secadoras",
     descripcionCorta:
-      "Cubierta impermeable con panel frontal abatible con cierre para operar sin retirar la funda.",
+      "Cubierta impermeable con puerta frontal con cierre para operar sin retirar la funda.",
     descripcionLarga:
-      "Diseñada específicamente para lavadoras contemporáneas de carga frontal (LG, Samsung, Whirlpool, Mabe, Electrolux). Fabricada en lona impermeable de alta durabilidad con recubrimiento protector y filtro UV para evitar la decoloración y resequedad solar. Incluye cierres resistentes que permiten abrir la escotilla cómodamente.",
+      "Diseñada específicamente para lavadoras contemporáneas de carga frontal (LG, Samsung, Whirlpool, Mabe, Electrolux). Fabricada en lona impermeable de alta durabilidad con recubrimiento protector y filtro UV para evitar la decoloración y resequedad solar. Cuenta con puerta frontal con cierre que permite abrir la escotilla cómodamente.",
     medidasSugeridas: [
       "Estándar 16-18 kg (60 x 65 x 85 cm)",
       "Grande 19-22 kg (68 x 70 x 98 cm)",
@@ -51,11 +51,9 @@ export const PRODUCTS: Product[] = [
       "A la medida exacta de tu equipo",
     ],
     caracteristicas: [
-      "100% Impermeable y resistente a la intemperie",
-      "Filtro UV contra resequedad solar",
-      "Apertura frontal con doble cierre reforzado",
-      "Respaldo semi-abierto para mangueras y adecuada ventilación",
-      "Costura reforzada con hilo náutico de alta tensión",
+      "Material 100% impermeable",
+      "Puerta frontal con cierre para operar el equipo",
+      "Respaldo abierto para mangueras y ventilación",
     ],
     imagen:
       "/assets/images/Lavadoras y Secadoras/FundaParaCargaFrontal_Plata_newD_01.webp",
@@ -121,9 +119,9 @@ export const PRODUCTS: Product[] = [
     categoria: "lavadoras",
     categoriaLabel: "Lavadoras y Secadoras",
     descripcionCorta:
-      "Tapa superior articulada con velcro y elástico perimetral antiviento. Acceso rápido a controles.",
+      "Tapa superior articulada con velcro para acceso rápido a controles sin retirar la funda.",
     descripcionLarga:
-      "Protección integral para lavadoras de carga superior. Cuenta con una cubierta superior articulada con velcro industrial que se levanta fácilmente para cargar prendas y dosificar detergente. Su elástico de ajuste perimetral evita que el viento la mueva en patios o azoteas.",
+      "Protección integral para lavadoras de carga superior. Cuenta con una cubierta superior articulada con velcro que se levanta fácilmente para cargar prendas y dosificar detergente, manteniendo tu equipo protegido en patios o azoteas.",
     medidasSugeridas: [
       "Chica 13-15 kg (60 x 60 x 95 cm)",
       "Mediana 17-19 kg (66 x 68 x 105 cm)",
@@ -131,11 +129,9 @@ export const PRODUCTS: Product[] = [
       "A la medida exacta de tu equipo",
     ],
     caracteristicas: [
-      "Tapa superior plegable con velcros industriales",
+      "Tapa superior plegable con velcro",
       "Tela vinílica resistente a la lluvia y humedad",
       "Fácil acceso al panel de mandos",
-      "Elástico perimetral de ajuste continuo",
-      "Costuras de alta resistencia con hilo náutico",
     ],
     imagen:
       "/assets/images/Lavadoras y Secadoras/FundaParaLavadora_Plata_m1m_02.webp",
@@ -208,10 +204,9 @@ export const PRODUCTS: Product[] = [
       "A la medida exacta de tu torre",
     ],
     caracteristicas: [
-      "Doble apertura frontal independiente",
-      "Protección contra lluvia, sol, sarro y polvo",
-      "Broches inferiores de alta sujeción",
-      "Ranura posterior para ducto de desfogue de secadora",
+      "Doble apertura frontal independiente para cada equipo",
+      "Protección contra lluvia, sol y polvo",
+      "Ranura posterior para mangueras y conexiones",
     ],
     imagen:
       "/assets/images/Lavadoras y Secadoras/FundaCentroLavado_Plata_CLD_01.webp",
@@ -282,19 +277,18 @@ export const PRODUCTS: Product[] = [
     categoria: "lavadoras",
     categoriaLabel: "Lavadoras y Secadoras",
     descripcionCorta:
-      "Protección frontal y superior con desfogue posterior para secadoras de gas o eléctricas.",
+      "Protección para secadoras de gas o eléctricas.",
     descripcionLarga:
-      "Cubierta fabricada con ajuste anatómico para secadoras residenciales. Diseñada con ranura trasera de ventilación que permite la salida libre del ducto de gas o aire caliente sin comprometer la protección contra la intemperie.",
+      "Cubierta fabricada con ajuste anatómico para secadoras de gas o eléctricas. Protege tu equipo contra intemperie, lluvia, sol, polvo y rayaduras en cuartos de lavado o patios.",
     medidasSugeridas: [
       "Secadora Estándar 18-20 kg (68 x 72 x 102 cm)",
       "Secadora Grande 22-24 kg (74 x 78 x 110 cm)",
       "A la medida exacta de tu secadora",
     ],
     caracteristicas: [
+      "Protección para secadoras de gas o eléctricas",
       "Apertura frontal ergonómica con cierre",
-      "Ranura de ventilación y ducto térmico",
-      "Protección 100% impermeable",
-      "Costuras náuticas reforzadas",
+      "Material impermeable y de fácil limpieza",
     ],
     imagen:
       "/assets/images/Lavadoras y Secadoras/FundaParaSecadora_Plata_smda_01.webp",
@@ -366,10 +360,9 @@ export const PRODUCTS: Product[] = [
       "A la medida exacta de tu conjunto",
     ],
     caracteristicas: [
-      "Protección continua de equipo y cajón pedestal",
-      "Doble apertura para tambor y cajón inferior",
-      "Material impermeable grabado y filtro solar UV",
-      "Costuras náuticas de alta tensión",
+      "Protección continua para lavadora y cajón pedestal",
+      "Apertura frontal para tambor y cajón",
+      "Material impermeable resistente a la intemperie",
     ],
     imagen:
       "/assets/images/Lavadoras y Secadoras/FundaPedestal_Grabado_F130emp_01.webp",
@@ -399,8 +392,7 @@ export const PRODUCTS: Product[] = [
     ],
     caracteristicas: [
       "Doble tapa superior independiente con velcro",
-      "Elástico perimetral antiviento",
-      "Material resistente al sol, agua y sarro",
+      "Material impermeable resistente al sol y al agua",
       "Fácil colocación y limpieza",
     ],
     imagen:
@@ -417,19 +409,18 @@ export const PRODUCTS: Product[] = [
     categoria: "lavadoras",
     categoriaLabel: "Lavadoras y Secadoras",
     descripcionCorta:
-      "Corte circular anatómico con cierre superior para lavadoras tradicionales tipo chacachaca.",
+      "Corte circular para lavadoras tradicionales redondas.",
     descripcionLarga:
-      "Confección circular a la medida exacta para lavadoras redondas clásicas (Koblenz, Cinsa). Protege el motor inferior, el esmalte de la tina y el reloj temporizador de la intemperie, lluvia y óxido.",
+      "Corte circular para lavadoras tradicionales redondas. Confección a la medida exacta que protege el motor, la tina y el reloj temporizador contra la intemperie, lluvia y polvo.",
     medidasSugeridas: [
       "Tina 14-16 kg (Diámetro 65 cm x Alto 90 cm)",
       "Tina 18-22 kg (Diámetro 72 cm x Alto 95 cm)",
       "A la medida de tu lavadora redonda",
     ],
     caracteristicas: [
-      "Patronaje circular ergonómico",
+      "Corte circular para lavadoras tradicionales",
       "Tapa superior con cierre perimetral",
-      "Lona vinílica impermeable de uso rudo",
-      "Ajuste inferior con jareta de amarre",
+      "Material impermeable resistente a la intemperie",
     ],
     imagen:
       "/assets/images/Lavadoras y Secadoras/Funda para lavadora redonda tradicional.webp",
@@ -456,10 +447,9 @@ export const PRODUCTS: Product[] = [
       "A la medida exacta de tu asador empotrado o móvil",
     ],
     caracteristicas: [
-      "Lona impermeable de gama alta calibre 6",
-      "Filtro UV contra decoloración y sol implacable",
-      "Ajuste perimetral antiviento en la base",
-      "Costuras de alta resistencia con hilo náutico",
+      "Lona impermeable calibre 6",
+      "Protección contra lluvia, cenizas y sol",
+      "Costuras reforzadas de alta durabilidad",
     ],
     imagen:
       "/assets/images-wm/Hogar/Asador/Portada. Asador medio hexágono.webp",
@@ -486,10 +476,9 @@ export const PRODUCTS: Product[] = [
       "A la medida exacta de tu futbolito",
     ],
     caracteristicas: [
-      "Disponible en Vinipiel negro afelpado o Lona impermeable calibre 6",
-      "100% Impermeable y resistente al polvo",
+      "Disponible en vinipiel negro afelpado o lona calibre 6",
       "Caída envolvente de 60 cm para proteger estructura y varillas",
-      "Interior afelpado suave anti-rayones",
+      "Protección impermeable contra polvo y líquidos",
     ],
     imagen:
       "/assets/images-wm/Hogar/Futbolito/Futbolito portada.webp",
@@ -512,10 +501,9 @@ export const PRODUCTS: Product[] = [
       "Confección a medida para mesas de carambola o medidas especiales",
     ],
     caracteristicas: [
-      "Acabado en Vinipiel negro afelpado de lujo o Lona calibre 6",
-      "Protección total del paño contra polvo, líquidos y luz UV",
-      "Faldón con caída de 30 cm con esquinas cuadradas reforzadas",
-      "Interior suave afelpado que cuida las bandas de madera",
+      "Disponible en vinipiel negro afelpado o lona calibre 6",
+      "Faldón con caída de 30 cm para proteger las bandas",
+      "Protege el paño contra polvo, derrames y sol",
     ],
     imagen:
       "/assets/images-wm/Hogar/Mesa de billar/Mesa de billar vinipiel.webp",
@@ -530,17 +518,16 @@ export const PRODUCTS: Product[] = [
     descripcionCorta:
       "Cubierta geométrica hexagonal de 6 caras confeccionada en lona impermeable calibre 6.",
     descripcionLarga:
-      "Patronaje geométrico milimétrico de 6 caras diseñado para mesas hexagonales exteriores de madera, cristal o herrería. Protege la superficie y los cantos con una caída perimetral de 40 cm y ajuste firme para resistir vientos fuertes.",
+      "Patronaje de 6 caras diseñado para mesas hexagonales exteriores de madera, cristal o herrería. Protege la superficie y los cantos con una caída perimetral de 40 cm.",
     medidasSugeridas: [
       "Mesa Hexagonal Lado 60 cm (145 cm frontal x 40 cm caída)",
       "Mesa Hexagonal Lado 72 cm (145 cm frontal x 40 cm caída)",
       "Confección a la medida de tu mesa hexagonal",
     ],
     caracteristicas: [
-      "Lona impermeable de gama alta calibre 6",
+      "Lona impermeable calibre 6",
       "Patrón exacto de 6 lados con caída de 40 cm",
-      "Ajuste perimetral antiviento",
-      "Máxima resistencia a la lluvia torrencial y sol extremo",
+      "Protección resistente a la intemperie y sol",
     ],
     imagen:
       "/assets/images-wm/Hogar/Mesa hexágono/Mesa hexágono portada.webp",
@@ -556,18 +543,17 @@ export const PRODUCTS: Product[] = [
     categoria: "hogar",
     categoriaLabel: "Para el Hogar y Jardín",
     descripcionCorta:
-      "Funda anatómica para mesa de tenis de mesa plegada sobre ruedas con ajuste superior e inferior.",
+      "Funda a la medida para mesa de ping pong plegada.",
     descripcionLarga:
-      "Diseñada a la medida para mesas plegables de ping pong (Stiga, Butterfly, Kettler). Su corte específico cubre tanto la parte superior angosta (20 cm) como la base ancha (40 cm) donde se sitúan las ruedas y el sistema de plegado, protegiendo los tableros de deformaciones por humedad o calor.",
+      "Diseñada a la medida para mesas plegables de ping pong. Su corte específico cubre tanto la parte superior como la base donde se sitúa el sistema de plegado, protegiendo los tableros de humedad y polvo.",
     medidasSugeridas: [
       "Mesa Plegada Estándar (160 cm largo x 140 cm alto x 20 cm sup. / 40 cm base)",
       "Confección a medida para mesas fijas o abiertas",
     ],
     caracteristicas: [
-      "100% Impermeable y resistente al polvo fino",
       "Corte anatómico adaptado al plegado de la mesa",
-      "Costuras reforzadas con hilo náutico",
-      "Fácil de colocar y retirar en segundos",
+      "Material impermeable y resistente al polvo",
+      "Fácil de colocar y retirar",
     ],
     imagen:
       "/assets/images-wm/Hogar/Mesa ping pong/Funda mesa ping pong.webp",
@@ -589,10 +575,9 @@ export const PRODUCTS: Product[] = [
       "A la medida de cualquier pantalla desde 32\" hasta 85\"+",
     ],
     caracteristicas: [
-      "Material impermeable reflectante térmico calibre 6",
+      "Material impermeable calibre 6",
       "Solapa posterior con velcro para soporte de pared",
-      "Bolsillo trasero para resguardo del control remoto",
-      "Protección contra lluvia, polvo, humedad y sol directo",
+      "Protección contra lluvia, polvo y sol directo",
     ],
     imagen:
       "/assets/images-wm/Hogar/Pantalla/T.v..webp",
@@ -614,9 +599,8 @@ export const PRODUCTS: Product[] = [
     ],
     caracteristicas: [
       "Lona textil de alta resistencia y durabilidad",
-      "Colores: Azul mezclilla, Azul rey, Verde olivo, Verde esmeralda y Rosa",
       "Asas reforzadas para alta capacidad de carga",
-      "Lavable, reutilizable y ecológica",
+      "Variedad de colores y fácil lavado",
     ],
     imagen:
       "/assets/images-wm/Hogar/Bolsa/Bolsas.webp",
@@ -685,10 +669,9 @@ export const PRODUCTS: Product[] = [
       "Medidas especiales para sastrería y boutiques",
     ],
     caracteristicas: [
-      "Cierre frontal completo de alta suavidad",
+      "Cierre frontal completo",
       "Ventana transparente para fácil identificación",
-      "Ojal de transporte para viaje",
-      "Material transpirable que evita malos olores y humedad",
+      "Protección contra polvo y arrugas",
     ],
     imagen:
       "/assets/images/Hogar/Portatraje_PTTR_01.webp",
@@ -714,10 +697,9 @@ export const PRODUCTS: Product[] = [
       "Bolsa para Sábanas y Almohadas (45 x 35 x 20 cm)",
     ],
     caracteristicas: [
-      "Ventana transparente frontal",
-      "Cierre perimetral bidireccional",
-      "Asas laterales reforzadas de transporte",
-      "Tejido impermeable antipolvo y antihumedad",
+      "Cierre perimetral para fácil apertura",
+      "Ventana frontal transparente",
+      "Material impermeable contra polvo y humedad",
     ],
     imagen:
       "/assets/images/Hogar/FundaParaEdredon_BOED_01.webp",
@@ -735,19 +717,18 @@ export const PRODUCTS: Product[] = [
     categoria: "hogar",
     categoriaLabel: "Para el Hogar y Jardín",
     descripcionCorta:
-      "Protección antipolvo y líquidos para PlayStation 5, PS5 Slim y Nintendo Switch OLED en tela Oxford o vinipiel.",
+      "Protección antipolvo y líquidos para PlayStation 5, PS5 Slim y Nintendo Switch OLED en poliforro o vinipiel afelpado.",
     descripcionLarga:
-      "Fundas a la medida exacta para resguardar tus consolas de videojuegos del polvo, pelusa y accidentes con líquidos cuando no están en uso. Fabricadas en tela Oxford impermeable o en lujoso vinipiel afelpado interior que evita cualquier rasguño en los paneles brillantes o carcasas de tu consola.",
+      "Fundas a la medida exacta para resguardar tus consolas de videojuegos del polvo, pelusa y accidentes con líquidos cuando no están en uso. Fabricadas en poliforro impermeable o en vinipiel afelpado interior que evita cualquier rasguño en los paneles o carcasas de tu consola.",
     medidasSugeridas: [
       "PlayStation 5 / PS5 Slim (Formato vertical con ranura para cables)",
       "Nintendo Switch y Switch OLED (Cubre consola montada en Dock)",
       "A la medida para Xbox Series X / Series S",
     ],
     caracteristicas: [
-      "Ranura posterior trasera para cables sin necesidad de desconectar",
-      "Disponible en tela impermeable Oxford y vinipiel afelpado suave",
-      "Evita acumulación de polvo en ventiladores y circuitos",
-      "Confección a la medida exacta de cada consola",
+      "Disponible en poliforro o vinipiel afelpado suave",
+      "Ranura posterior para paso de cables",
+      "Protección contra polvo y salpicaduras",
     ],
     imagen:
       "/assets/images-wm/Hogar/Consolas videojuegos/playstation 5 slim sin lectora.webp",
@@ -772,10 +753,9 @@ export const PRODUCTS: Product[] = [
       "Confección a la medida exacta de tu bocina o subwoofer",
     ],
     caracteristicas: [
-      "Vinipiel color negro con interior afelpado suave anti-rayaduras",
-      "100% Impermeable contra líquidos y derrames accidentales",
-      "Barrera efectiva contra polvo y rayos solares",
-      "Corte anatómico vertical de fácil colocación",
+      "Vinipiel color negro con interior afelpado suave",
+      "Protección contra polvo, sol y rayaduras",
+      "Corte anatómico de fácil colocación",
     ],
     imagen:
       "/assets/images-wm/Hogar/Buffer/Especial 92 x 44 x 38.webp",
@@ -797,10 +777,9 @@ export const PRODUCTS: Product[] = [
       "A la medida exacta de tus equipales",
     ],
     caracteristicas: [
-      "100% Impermeable y resistente al sol UV",
-      "Diseño curvo anatómico respetando la forma del equipal",
-      "Evita resequedad de la piel y pudrición de la madera/vara",
-      "Fácil colocación y amarre antiviento inferior",
+      "Material impermeable calibre 6",
+      "Diseño curvo anatómico respetando la silueta del equipal",
+      "Protege contra el sol y la lluvia",
     ],
     imagen:
       "/assets/images-wm/Hogar/Equipal/1.- equipal portada.webp",
@@ -817,7 +796,7 @@ export const PRODUCTS: Product[] = [
     descripcionCorta:
       "Cubierta circular impermeable de alta resistencia calibre 6 con caída perimetral para mesas de comedor exterior.",
     descripcionLarga:
-      "Cubierta circular con patronaje exacto para mesas redondas de jardín, terraza y restaurantes. Fabricada en lona impermeable calibre 6 de alta resistencia que soporta lluvias torrenciales y sol directo, evitando que la madera se infle o el cristal se manche de sarro.",
+      "Cubierta circular con patronaje exacto para mesas redondas de jardín, terraza y restaurantes. Fabricada en lona impermeable calibre 6 de alta resistencia que soporta lluvias y sol directo, evitando que la madera se infle o el cristal se manche de sarro.",
     medidasSugeridas: [
       "Mesa Redonda 4 Personas (Diámetro 1.00 m a 1.20 m)",
       "Mesa Redonda 6-8 Personas (Diámetro 1.40 m a 1.60 m)",
@@ -825,10 +804,9 @@ export const PRODUCTS: Product[] = [
       "A la medida exacta de tu mesa o conjunto exterior",
     ],
     caracteristicas: [
-      "Lona impermeable de gama alta calibre 6",
-      "Corte circular uniforme con caída de protección",
-      "Costuras náuticas termoselladas y reforzadas",
-      "Cordón perimetral de ajuste inferior contra vientos",
+      "Lona impermeable calibre 6",
+      "Corte circular con caída perimetral",
+      "Costuras reforzadas resistentes a la intemperie",
     ],
     imagen:
       "/assets/images-wm/Hogar/Mesa Redonda/Portada mesa redonda.webp",
@@ -853,10 +831,9 @@ export const PRODUCTS: Product[] = [
       "Confección a la medida de tu equipo",
     ],
     caracteristicas: [
-      "Protege rodillos internos contra pelusa y polvo fino",
-      "Material de fácil limpieza y alta durabilidad",
-      "Corte a la medida exacta con costuras reforzadas",
-      "Diseño compacto que ocupa mínimo espacio",
+      "Protege rodillos y componentes contra el polvo",
+      "Material impermeable y de fácil limpieza",
+      "Confección a la medida exacta",
     ],
     imagen:
       "/assets/images-wm/Hogar/Enmicadora/Enmicadora Office Depot LM401mod.2.webp",
@@ -882,10 +859,9 @@ export const PRODUCTS: Product[] = [
       "A la medida de cualquier impresora, plotter o multifuncional",
     ],
     caracteristicas: [
-      "Protege cabezales, inyectores y rodillos del polvo ambiental",
-      "Disponible en tela impermeable o vinipiel afelpado de lujo",
-      "Abertura posterior para paso libre de cables",
-      "Modelos para HP, Brother, Canon, Epson y marcas industriales",
+      "Disponible en tela impermeable o vinipiel afelpado",
+      "Abertura posterior para paso de cables",
+      "Protege cabezales y rodillos del polvo ambiental",
     ],
     imagen:
       "/assets/images-wm/Hogar/Impresora/Hp chica/Portada Hp 580 mod2.webp",
@@ -905,20 +881,18 @@ export const PRODUCTS: Product[] = [
     categoria: "vehiculos",
     categoriaLabel: "Vehículos y Motos",
     descripcionCorta:
-      "Capa externa impermeable con interior de algodón afelpado que cuida la pintura y el barniz.",
+      "Cubierta afelpada para auto y sedán que protege la carrocería y pintura.",
     descripcionLarga:
-      "La protección definitiva contra el sol mexicano, lluvia ácida, salitre marino y rayones de gatos. Confeccionada con patrón según la silueta de tu vehículo. Incluye bolsas para espejos retrovisores, elásticos en las fascias y cinchas inferiores con broche para viento.",
+      "Protección contra el sol, polvo, lluvia y rayones. Confeccionada según la silueta de tu vehículo, con exterior impermeable e interior afelpado suave que cuida la pintura y el barniz.",
     medidasSugeridas: [
       "Sedán Mediano (Versa, Civic, Jetta, Sentra)",
       "Sedán Grande (Accord, Camry, Serie 3, Passat)",
       "A la medida exacta de tu marca y modelo",
     ],
     caracteristicas: [
-      "Capa interior de algodón afelpado suave anti-rayones",
-      "Capa exterior impermeable con filtro UV 50+",
-      "Bolsas para espejos retrovisores y elásticos de fascia",
-      "Correas con broche clic bajo chasis antiviento",
-      "Costura náutica reforzada",
+      "Interior afelpado suave que no raya la pintura",
+      "Exterior resistente e impermeable",
+      "Confección a la silueta de tu vehículo",
     ],
     imagen:
       "/assets/images/Vehiculos/Fundas_Para_Auto.webp",
@@ -931,9 +905,9 @@ export const PRODUCTS: Product[] = [
     categoria: "vehiculos",
     categoriaLabel: "Vehículos y Motos",
     descripcionCorta:
-      "Ajuste milimétrico para camionetas familiares y SUV con protección solar e interior afelpado.",
+      "Cubierta afelpada a la medida para camionetas familiares y SUV.",
     descripcionLarga:
-      "Cubierta automotriz para SUV compactas, medianas y de 3 filas. Protege la pintura, faros y quemacocos del sol extremo, la lluvia torrencial y la resina de árboles. Forro interior de algodón suave para cuidar el acabado automotriz.",
+      "Cubierta para SUV compactas, medianas y grandes. Protege la carrocería y pintura del sol, polvo y lluvia. Confeccionada con interior afelpado suave para cuidar el acabado del vehículo.",
     medidasSugeridas: [
       "SUV Compacta (HR-V, Kicks, Tracker, Duster)",
       "SUV Familiar (CR-V, RAV4, CX-5, Tiguan, Tucson)",
@@ -941,10 +915,9 @@ export const PRODUCTS: Product[] = [
       "A la medida exacta de tu SUV",
     ],
     caracteristicas: [
-      "Interior 100% afelpado que no raya el transparente",
-      "Exterior vinílico impermeable de grado intemperie",
-      "Elásticos perimetrales de tensión continua",
-      "Resistente a salitre y agentes químicos ambientales",
+      "Interior afelpado suave que cuida la pintura",
+      "Exterior impermeable de alta resistencia",
+      "Patrón a la medida para cada modelo de SUV",
     ],
     imagen:
       "/assets/images/Vehiculos/Funda_Para_Camioneta-500x500.webp",
@@ -957,9 +930,9 @@ export const PRODUCTS: Product[] = [
     categoria: "vehiculos",
     categoriaLabel: "Vehículos y Motos",
     descripcionCorta:
-      "Corte específico para pickups con batea cubierta o descubierta, rollbar y estribos.",
+      "Corte específico para pickups con batea cubierta o descubierta.",
     descripcionLarga:
-      "Protege tanto la cabina como la batea de pickups de trabajo o de lujo (Hilux, Tacoma, Ranger, Lobo F-150, Silverado, RAM). Fabricada en lona pesada calibre resistente a desgarres y rayos solares implacables.",
+      "Protege tanto la cabina como la batea de pickups contra el sol, polvo y lluvia. Fabricada en lona pesada calibre resistente a la intemperie.",
     medidasSugeridas: [
       "Pickup Mediana Doble Cabina (Hilux, Tacoma, Frontier)",
       "Pickup Grande Cabina Regular (F-150, Cheyenne)",
@@ -967,10 +940,9 @@ export const PRODUCTS: Product[] = [
       "Confección adaptada a batea con rollbar o caja seca",
     ],
     caracteristicas: [
-      "Ajuste anatómico para cabina y batea",
-      "Refuerzo en puntos de fricción y esquinas",
-      "Ojales reforzados para candado de seguridad",
-      "100% resistente al agua y a la intemperie",
+      "Corte a la medida para cabina y batea",
+      "Material resistente al sol y la intemperie",
+      "Costuras reforzadas en puntos de apoyo",
     ],
     imagen:
       "/assets/images/Vehiculos/Funda_Para_Pickup-500x500.webp",
@@ -983,9 +955,9 @@ export const PRODUCTS: Product[] = [
     categoria: "vehiculos",
     categoriaLabel: "Vehículos y Motos",
     descripcionCorta:
-      "Panel térmico inferior que tolera el calor del tubo de escape y orificios para candado.",
+      "Funda impermeable para motocicleta con ajuste a la medida.",
     descripcionLarga:
-      "Protección compacta y ultra resistente para motos deportivas, scooters, chopper o adventure touring. No se derrite con el tubo de escape tibio gracias a sus paneles térmicos de protección en la zona baja.",
+      "Protección para motocicletas contra polvo, sol y lluvia en cochera o intemperie. Confeccionada en material impermeable resistente para resguardar la pintura y componentes de tu moto.",
     medidasSugeridas: [
       "Scooter / Urbana 125-250cc (200 x 90 x 100 cm)",
       "Deportiva / Naked 300-900cc (220 x 95 x 110 cm)",
@@ -993,10 +965,9 @@ export const PRODUCTS: Product[] = [
       "A la medida de tu modelo",
     ],
     caracteristicas: [
-      "Panel térmico inferior resistente al calor del escape",
-      "Ojales de aluminio delanteros para candado en U",
-      "Elásticos perimetrales de tensión continua",
-      "Incluye bolsa de transporte compacta",
+      "Material impermeable de alta resistencia",
+      "Protege pintura, manubrio y componentes del sol y polvo",
+      "Corte adaptado a la silueta de la motocicleta",
     ],
     imagen:
       "/assets/images/Vehiculos/Fundas_Para_Motocicleta_1-500x500.webp",
@@ -1009,9 +980,9 @@ export const PRODUCTS: Product[] = [
     categoria: "vehiculos",
     categoriaLabel: "Vehículos y Motos",
     descripcionCorta:
-      "Corte amplio con refuerzo para manubrio y parrillas delanteras y traseras de cuatrimotos.",
+      "Funda impermeable para cuatrimoto (ATV).",
     descripcionLarga:
-      "Protege tu cuatrimoto de lodo, sol, lluvia y polvo en cochera o remolque. Diseñada con amplitud para cubrir rines de tacos, defensas y parrillas utilitarias sin rasgarse.",
+      "Protege tu cuatrimoto de polvo, sol y lluvia en cochera o remolque. Diseñada con amplitud para cubrir defensas, llantas y parrillas utilitarias.",
     medidasSugeridas: [
       "Cuatrimoto Chica 250cc (190 x 105 x 100 cm)",
       "Cuatrimoto Estándar 450-700cc (215 x 120 x 115 cm)",
@@ -1019,10 +990,9 @@ export const PRODUCTS: Product[] = [
       "A la medida exacta de tu ATV",
     ],
     caracteristicas: [
-      "Lona uso rudo impermeable y antipolvo",
-      "Costuras náuticas de alta tensión",
-      "Broches y elásticos de amarre para viento",
-      "Resistente a rayos UV y salpicaduras",
+      "Material impermeable de uso rudo",
+      "Amplitud para cubrir manubrio, defensas y parrillas",
+      "Costuras reforzadas de alta durabilidad",
     ],
     imagen:
       "/assets/images/Vehiculos/Fundas_Para_Cuatrimoto.webp",
@@ -1034,19 +1004,18 @@ export const PRODUCTS: Product[] = [
     categoria: "vehiculos",
     categoriaLabel: "Vehículos y Motos",
     descripcionCorta:
-      "Cubierta impermeable ligera para bicicletas de montaña, ruta o paseo individual y doble.",
+      "Cubierta impermeable para bicicleta individual o doble.",
     descripcionLarga:
-      "Mantén la cadena, cambios y sillín protegidos del óxido, la lluvia y los rayos solares en cocheras, balcones o pasillos. Material ligero e impermeable con broche inferior antiviento.",
+      "Mantén la cadena, cambios y sillín protegidos del polvo, la lluvia y el sol en cocheras, balcones o pasillos. Material ligero e impermeable de fácil colocación.",
     medidasSugeridas: [
       "Bicicleta Individual Adulto Rodada 26-29 (180 x 60 x 100 cm)",
       "Bicicleta Doble / 2 Bicis (200 x 80 x 110 cm)",
       "A la medida de tu bici de ruta o montaña",
     ],
     caracteristicas: [
-      "Impermeable y con filtro contra rayos UV",
-      "Broche de clic inferior y elásticos en ruedas",
-      "Evita el óxido en transmisión y componentes",
-      "Plegado ultra compacto",
+      "Material ligero e impermeable",
+      "Protege componentes del sol, polvo y humedad",
+      "Fácil de colocar y retirar",
     ],
     imagen:
       "/assets/images/Vehiculos/FundaParaBicicleta_BICH.webp",

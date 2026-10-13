@@ -17,7 +17,7 @@ const corporateValues = [
     icon: ShieldCheck,
     title: "Calidad Garantizada",
     description:
-      "Seleccionamos rigurosamente telas impermeables de grado marino y costuras con hilo náutico que resisten intemperie extrema sin deteriorarse.",
+      "Seleccionamos rigurosamente lonas impermeables calibre 6 y vinipiel afelpado de primera calidad con costuras reforzadas para intemperie extrema.",
   },
   {
     icon: Users,
@@ -35,13 +35,13 @@ const corporateValues = [
     icon: CheckCircle,
     title: "Confiabilidad",
     description:
-      "Tiempos de entrega certeros, facturación transparente y el respaldo de más de 15 años de trayectoria sólida en la industria mexicana.",
+      "Tiempos de entrega certeros, facturación transparente y el respaldo de más de 26 años de trayectoria sólida en la industria mexicana.",
   },
   {
     icon: Gem,
     title: "Orgullo por el Detalle",
     description:
-      "Cuidado artesanal en cada corte, vivo perimetral, ojal y remate, honrando la tradición de confección mexicana de alta gama.",
+      "Cuidado artesanal en cada corte, ojal y remate, honrando la tradición de confección mexicana de alta gama.",
   },
 ];
 
@@ -107,7 +107,7 @@ export default function CompanyMissionVision() {
 
             <div className="mt-8 pt-6 border-t border-orange-200/60 flex items-center gap-3 text-xs font-bold text-accent">
               <span className="w-2.5 h-2.5 rounded-full bg-accent" />
-              <span>Materiales certificados • Larga vida útil</span>
+              <span>Materiales de primera calidad • Larga vida útil</span>
             </div>
           </motion.div>
 

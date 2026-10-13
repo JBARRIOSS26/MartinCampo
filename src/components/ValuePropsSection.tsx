@@ -16,7 +16,7 @@ const valueProps = [
     icon: Layers,
     title: "Material de Máxima Calidad",
     description:
-      "Telas vinílicas de grado marino y poliéster Oxford 600D con pespuntes reforzados en hilo náutico. Resistencia superior al desgaste.",
+      "Confeccionadas con lona impermeable calibre 6 para intemperie, vinipiel negro afelpado de alta protección y poliforro ligero antipolvo.",
     color: "bg-blue-100",
     iconColor: "text-blue-600",
   },
@@ -24,7 +24,7 @@ const valueProps = [
     icon: ShieldCheck,
     title: "Protección Total (Polvo y Clima)",
     description:
-      "Bloqueo UV certificado, resistencia a lluvias torrenciales, salitre costero y acumulación de polvo. Tus bienes siempre protegidos.",
+      "Bloqueo UV, resistencia a lluvias, salitre costero y acumulación de polvo. Tus bienes siempre protegidos.",
     color: "bg-emerald-100",
     iconColor: "text-emerald-600",
   },
@@ -32,7 +32,7 @@ const valueProps = [
     icon: Crosshair,
     title: "Ajuste Perfecto a la Medida",
     description:
-      "Patronaje específico por modelo y marca. Broches de presión industriales, elásticos antiviento y velcro de alta adherencia.",
+      "Patronaje específico por modelo y marca. Broches de presión y velcro de alta adherencia.",
     color: "bg-violet-100",
     iconColor: "text-violet-600",
   },
@@ -46,7 +46,7 @@ const metrics = [
   },
   {
     icon: Clock,
-    label: "15+ Años Experiencia",
+    label: "26+ Años Experiencia",
     sublabel: "Confección especializada",
   },
   {
@@ -83,7 +83,7 @@ export default function ValuePropsSection() {
             ¿Por qué elegir Martín del Campo?
           </h2>
           <p className="mt-3 text-text-secondary text-base sm:text-lg max-w-2xl mx-auto">
-            Más de 15 años perfeccionando el patronaje y confección de cubiertas protectoras para intemperie.
+            Más de 26 años perfeccionando el patronaje y confección de cubiertas protectoras para intemperie.
           </p>
         </motion.div>
 

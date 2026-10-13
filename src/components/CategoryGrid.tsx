@@ -39,7 +39,7 @@ const categories: CategoryItem[] = [
   {
     id: "vehiculos",
     title: "Vehículos y Motos",
-    description: "Cubiertas de grado marino que protegen la carrocería y pintura.",
+    description: "Cubiertas afelpadas que protegen la carrocería y pintura.",
     icon: Car,
     tags: ["Sedán / SUV", "Pickups", "Motocicletas"],
     color: "from-emerald-500/10 to-emerald-600/5",

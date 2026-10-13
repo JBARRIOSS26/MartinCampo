@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 
 const stats = [
-  { value: "+15", label: "años de taller" },
+  { value: "+26", label: "años de taller" },
   { value: "100%", label: "impermeable" },
   { value: "Hecho", label: "en México" },
 ];

@@ -51,8 +51,8 @@ export default function Footer() {
 
             <p className="text-sm text-white/75 leading-relaxed pt-1">
               Líderes en confección textil de alta resistencia en México. Protegemos tus
-              equipos del hogar, vehículos e inversiones con telas impermeables de grado marino
-              y patronaje milimétrico artesanal.
+              equipos del hogar, vehículos e inversiones con lonas impermeables calibre 6,
+              vinipiel afelpado y patronaje milimétrico artesanal.
             </p>
 
             {/* Sellos de Calidad */}

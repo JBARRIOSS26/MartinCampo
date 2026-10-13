@@ -11,7 +11,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Fundas y Cubiertas Martín del Campo | Protección Premium Hecha en México",
   description:
-    "Fundas y cubiertas de alta gama hechas a la medida en México. Protección impermeable para lavadoras, vehículos, motos y hogar. Telas de grado marino con filtro UV. Envíos a todo México.",
+    "Fundas y cubiertas de alta gama hechas a la medida en México. Protección impermeable para lavadoras, vehículos, motos y hogar. Lonas impermeables calibre 6 y vinipiel afelpado. Envíos a todo México.",
   keywords: [
     "fundas a la medida",
     "cubiertas impermeables",

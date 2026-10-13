@@ -30,7 +30,7 @@ const CATEGORIAS_MEDIDA = [
 ];
 
 const TIPOS_PROTECCION = [
-  { id: "intemperie", label: "100% Intemperie Calibre 6", badge: "Más Solicitado", desc: "Lona impermeable contra lluvias torrenciales y rayos UV" },
+  { id: "intemperie", label: "100% Intemperie Calibre 6", badge: "Más Solicitado", desc: "Lona impermeable contra lluvias y rayos UV" },
   { id: "afelpado", label: "Vinipiel Negro Afelpado", badge: "Máximo Cuidado", desc: "Vinipiel color negro con interior afelpado suave que no raya pinturas finas, cristales ni acabados delicados" },
   { id: "ligero", label: "Poliforro / Antipolvo Comercial", badge: "Uso Interior", desc: "Protección ligera y transpirable para bodegas y talleres" },
 ];
@@ -38,7 +38,7 @@ const TIPOS_PROTECCION = [
 const ADICIONALES = [
   { id: "velcro", label: "Solapas con velcro de alta adherencia" },
   { id: "ojillos", label: "Ojillos perimetrales para amarrar" },
-  { id: "resorte", label: "Elástico / resorte inferior ajustable" },
+  { id: "cierre", label: "Apertura con cierre para fácil acceso" },
 ];
 
 export default function CustomQuoteBuilder() {
@@ -368,7 +368,7 @@ export default function CustomQuoteBuilder() {
                   3
                 </span>
                 <p>
-                  <strong className="text-text-primary">Confección en Guadalajara:</strong> Cortamos y cosemos con hilo náutico de alta resistencia en 3 a 5 días.
+                  <strong className="text-text-primary">Confección en Guadalajara:</strong> Cortamos y cosemos con costuras reforzadas de alta durabilidad en 3 a 5 días.
                 </p>
               </div>
 

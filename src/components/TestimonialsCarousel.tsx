@@ -46,9 +46,9 @@ const testimonials: Testimonial[] = [
     role: "Dirección General",
     organization: "Castellón Pianos (Desde 1919)",
     logo: "/assets/images/LogosClientes/CastellonPianos.jpeg",
-    highlight: "Más de 9 años de relación comercial continua",
+    highlight: "Más de 15 años de relación comercial continua",
     quote:
-      "El giro de nuestro negocio 'Castellón Pianos' es la venta de Pianos e instrumentos de Teclado, mantenemos relación con la Sra. Imelda desde hace aproximadamente 9 años, es nuestro proveedor de confección de fundas para los instrumentos musicales; ella es una persona profesional y confiable y no hemos tenido contratiempos en el tiempo de conocerla.",
+      "El giro de nuestro negocio 'Castellón Pianos' es la venta de Pianos e instrumentos de Teclado, mantenemos relación con la Sra. Imelda desde hace aproximadamente 15 años, es nuestro proveedor de confección de fundas para los instrumentos musicales; ella es una persona profesional y confiable y no hemos tenido contratiempos en el tiempo de conocerla.",
     stars: 5,
     type: "comercial",
   },

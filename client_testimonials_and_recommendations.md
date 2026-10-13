@@ -45,8 +45,8 @@ Este documento recopila las recomendaciones, comentarios y reseñas de clientes 
 * **Sitio web:** [www.castellonpianos.com](https://www.castellonpianos.com)
 * **Nombre de quien comentó:** Alejandro Castellón
 * **Comentario:** 
-  > "El giro de nuestro negocio 'Castellón Pianos' es la venta de Pianos e instrumentos de Teclado, mantenemos relación con la Sra. Imelda desde hace aproximadamente 9 años, es nuestro proveedor de confección de fundas para los instrumentos musicales; ella es una persona profesional y confiable y no hemos tenido contratiempos en el tiempo de conocerla."
-* **Detalle / Enlace:** Relación comercial de más de 9 años.
+  > "El giro de nuestro negocio 'Castellón Pianos' es la venta de Pianos e instrumentos de Teclado, mantenemos relación con la Sra. Imelda desde hace aproximadamente 15 años, es nuestro proveedor de confección de fundas para los instrumentos musicales; ella es una persona profesional y confiable y no hemos tenido contratiempos en el tiempo de conocerla."
+* **Detalle / Enlace:** Relación comercial de más de 15 años.
 
 ---
 
